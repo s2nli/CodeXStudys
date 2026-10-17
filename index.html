@@ -6,6 +6,14 @@
 <title>CodeXStudys — All Study Platforms In One Place</title>
 <meta name="description" content="All Study Platforms In One Place — Premium ecosystem for every student">
 <meta name="theme-color" content="#00c8ff">
+<link rel="icon" type="image/png" sizes="192x192" href="https://files.catbox.moe/1phadr.png">
+<link rel="shortcut icon" href="https://files.catbox.moe/1phadr.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://files.catbox.moe/1phadr.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CodeXStudys">
+<meta property="og:title" content="CodeXStudys — All Study Platforms In One Place">
+<meta property="og:description" content="All Study Platforms In One Place — Premium ecosystem for every student">
+<meta property="og:image" content="https://files.catbox.moe/1phadr.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -1789,7 +1797,7 @@ function closeModal(id){var m=document.getElementById(id);if(m)m.classList.remov
         <div style="flex:1"><div class="ai-nm">CODEX AI</div><div class="ai-st">Advanced Assistant • Always Online</div></div>
       </div>
       <div class="ai-msgs" id="ai-msgs-page" style="max-height:55vh;padding:14px">
-        <div class="ai-msg bot">Namaste! 👋 Main <strong>CodeX AI</strong> hoon. Kuch bhi pucho — platforms, providers, exact links, keys, ya koi bhi topic!</div>
+        <div class="ai-msg bot">Namaste! 👋 Main <strong>CodeX AI</strong> hoon — site ke saare providers, platforms aur links mujhe pata hain. JEE/NEET/UPSC/Coding ke liye platform, compare, key, APK, math, ya koi bhi general sawaal — kuch bhi pucho!</div>
       </div>
       <div class="ai-sugs" style="padding:8px 14px">
         <span class="ai-sug" onclick="askAIPage('Spidey Universe ke exact links kya hain?')">Spidey links</span>
@@ -1803,6 +1811,11 @@ function closeModal(id){var m=document.getElementById(id);if(m)m.classList.remov
         <span class="ai-sug" onclick="askAIPage('NEET ke liye resources?')">NEET</span>
         <span class="ai-sug" onclick="askAIPage('APK download kahan se karein?')">APK download</span>
         <span class="ai-sug" onclick="askAIPage('Sab providers ki list?')">All providers</span>
+        <span class="ai-sug" onclick="askAIPage('Coding courses dikhao')">Coding</span>
+        <span class="ai-sug" onclick="askAIPage('Video editing courses')">Video editing</span>
+        <span class="ai-sug" onclick="askAIPage('Delta vs Spidey compare')">Compare</span>
+        <span class="ai-sug" onclick="askAIPage('Kitne platforms hain?')">Stats</span>
+        <span class="ai-sug" onclick="askAIPage('Black hole kya hai?')">Ask anything</span>
       </div>
       <div class="ai-inp-row" style="padding:10px 12px 14px">
         <input class="ai-inp" id="ai-inp-page" placeholder="Kuch bhi pucho..." onkeydown="if(event.key==='Enter')sendAIPage()">
@@ -1821,7 +1834,7 @@ function closeModal(id){var m=document.getElementById(id);if(m)m.classList.remov
     <button class="ai-x" onclick="toggleAI()" type="button">✕</button>
   </div>
   <div class="ai-msgs" id="ai-msgs">
-    <div class="ai-msg bot">Namaste! 👋 Main <strong>CodeX AI</strong> hoon. Kuch bhi pucho — platforms, providers, exact links, keys, ya koi bhi topic!</div>
+    <div class="ai-msg bot">Namaste! 👋 Main <strong>CodeX AI</strong> hoon — site ke saare providers, platforms aur links mujhe pata hain. JEE/NEET/UPSC/Coding ke liye platform, compare, key, APK, math, ya koi bhi general sawaal — kuch bhi pucho!</div>
   </div>
   <div class="ai-sugs">
     <span class="ai-sug" onclick="askAI('Spidey Universe ke exact links kya hain?')">Spidey links</span>
@@ -1833,6 +1846,10 @@ function closeModal(id){var m=document.getElementById(id);if(m)m.classList.remov
     <span class="ai-sug" onclick="askAI('CUET ke liye kya hai?')">CUET</span>
     <span class="ai-sug" onclick="askAI('APK download kahan se karein?')">APK download</span>
     <span class="ai-sug" onclick="askAI('Telegram channel kya hai?')">Telegram</span>
+    <span class="ai-sug" onclick="askAI('JEE ke liye best platform?')">JEE</span>
+    <span class="ai-sug" onclick="askAI('Coding courses dikhao')">Coding</span>
+    <span class="ai-sug" onclick="askAI('Kitne platforms hain?')">Stats</span>
+    <span class="ai-sug" onclick="askAI('Black hole kya hai?')">Ask anything</span>
   </div>
   <div class="ai-inp-row">
     <input class="ai-inp" id="ai-inp" placeholder="Kuch bhi pucho..." onkeydown="if(event.key==='Enter')sendAI()">
@@ -1888,13 +1905,16 @@ const PROV=[
     {n:'Physics Wallah 5',l:L.pw,t:'web',url:'https://codexstudy.dpdns.org/pw/'},
     {n:'Physics Wallah 6',l:L.pw,t:'web',url:'https://www.learnxpw.site/study/batches'},
     {n:'Physics Wallah 7',l:L.pw,t:'web',gate:'embed:pwsphere'},
+    {n:'Physics Wallah 8',l:L.pw,t:'web',url:'https://s2-cdn.pwnexus.eu.cc/study/batches'},
     {n:'PW Pi',l:L.pipro,t:'web',url:'https://pi-pro.space-z.ai/'},
-    {n:'Pi 2',l:L.pipro,t:'web',url:'https://studyaura.online/study/pi'},
+    {n:'Pi 2',l:L.pipro,t:'web',url:'https://s2-cdn.pwnexus.eu.cc/study/pi'},
     {n:'Digital books',l:L.pw,t:'web',url:'https://books.streamfiles.eu.org/'},
     {n:'Digital book 2',l:L.pw,t:'web',url:'https://pikachu-books.vercel.app/'},
     {n:'Digital Book Test',l:L.pw,t:'web',url:'https://pwxbooks.pages.dev/'},
-    {n:'Infinite Practice',l:L.pw,t:'web',url:'https://pwx.pages.dev/batch/infinite-practice'},
+    {n:'Infinite Practice',l:L.pw,t:'web',url:'https://pwnexus.eu.cc/pw-infinity-practice'},
+    {n:'Infinite Practice 2',l:L.pw,t:'web',url:'https://pwx.pages.dev/batch/infinite-practice'},
     {n:'Allen',l:L.al,t:'bot',url:'https://t.me/prepneet1bot?start=start'},
+    {n:'Allen 2',l:L.al,t:'web',url:'https://others.streamfiles.eu.org/allen/'},
     {n:'Unacademy',l:L.un,t:'web',url:'https://nexthope.pages.dev/unacademy/'},
     {n:'Unacademy 2',l:L.un,t:'web',gate:'embed:unacademy_hub'},
     {n:'KGS 1',l:L.kgs,t:'web',url:'https://sahukgs.com/batches'},
@@ -1909,18 +1929,20 @@ const PROV=[
     {n:'Apna College',l:L.ac,t:'web',url:'https://ac.codexstudy.dpdns.org'},
     {n:'Target Board',l:L.tb,t:'web',url:'https://asmultiverse.app/?tab=home&app=694690cbe1df5128eacc5caa'},
     {n:'Disha Online Classes',l:'https://files.catbox.moe/bl6n75.png',t:'web',url:'https://ais-pre-gl6pz5zl474l7n2yngs5xz-737969307990.asia-southeast1.run.app/'},
-    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://vidya.nexthope.site/'},
+    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://pwnexus.eu.cc/vidyagram'},
     {n:'Vidyagram 2',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://learnbyakp.site/vidyagram'},
-    {n:'Yes Officer',l:'https://iili.io/Cm8DWen.jpg',t:'web',url:'https://yesofficer.nexthope.site/'},
+    {n:'Yes Officer',l:'https://iili.io/Cm8DWen.jpg',t:'web',url:'https://yesofficer.nexthope.cc.cd/'},
     {n:'RG Vikramjeet',l:L.rgv,t:'web',url:'https://learnbyakp.site/vikaram'},
     {n:'Vidyakul',l:L.vk,t:'web',url:'https://vidyakool.streamfiles.eu.org/'},
+    {n:'Utkarsh',l:'https://i.postimg.cc/wv3XtmG8/20260217-013950.jpg',t:'web',url:'https://asmultiverse.app/?tab=home&app=5eb393ee95fab7468a823dhAB2'},
+    {n:'Just Padhle',l:'https://i.ibb.co/fdZ4rc6F/10266.jpg',t:'web',url:'https://deltastudy.fun/verify?next=%2Fpadhle'},
     {n:'Sarvam Crash Course',l:L.srv,t:'web',gate:'embed:sarvam_institute'},
     {n:'Sarvam Career Institute',l:L.srv,t:'web',gate:'embed:sarvam_crash'},
-    {n:'Study IQ',l:L.siq,t:'web',url:'https://spidyiq.vercel.app/'},
+    {n:'Study IQ',l:L.siq,t:'web',url:'https://pwnexus.eu.cc/study-iq'},
     {n:'CDS Journey',l:L.cds,t:'web',url:'https://spidyuniversecds.vercel.app/'},
-    {n:'Sachin Academy',l:'https://i.ibb.co/n8PJXJ5X/Screenshot-2026-08-28-16-25-52-876-com-android-chrome.png',t:'web',url:'https://sachinacademy.netlify.app/'},
+    {n:'Sachin Academy',l:'https://i.ibb.co/n8PJXJ5X/Screenshot-2026-08-28-16-25-52-876-com-android-chrome.png',t:'web',url:'https://sachin.nexthope.cc.cd/'},
     {n:'Sachin Classes 2',l:'https://i.ibb.co/n8PJXJ5X/Screenshot-2026-08-28-16-25-52-876-com-android-chrome.png',t:'web',url:'https://sachin.nexthope.site'},
-    {n:'Toppers Wisdom',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://tw.nexthope.site/'},
+    {n:'Toppers Wisdom',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://pwnexus.eu.cc/topper-wisdom'},
     {n:'GS Vision',l:'https://files.catbox.moe/mzecv5.png',t:'web',url:'https://nexthope.pages.dev/gsvision/'},
     {n:'Future Kul',l:'https://files.catbox.moe/ck8uz5.png',t:'web',url:'https://nexthope.pages.dev/futurekul/'},
     {n:'MD Classes',l:'https://iili.io/CehU8tn.png',t:'web',url:'https://mdclassesx.vercel.app/'},
@@ -1938,7 +1960,30 @@ const PROV=[
     {n:'Banking',l:'https://imgyx.pages.dev/HMVE4',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
     {n:'BSc Nursing',l:'https://imgyx.pages.dev/dvZrR',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
     {n:'UPSC',l:'https://imgyx.pages.dev/56DA7',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
-    {n:'Defense',l:'https://imgyx.pages.dev/xa1lZ',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'}]},
+    {n:'Defense',l:'https://imgyx.pages.dev/xa1lZ',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
+    {n:'NickZ Editing',l:'https://imgyx.pages.dev/lSm3X',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Basic Video Editing',l:'https://imgyx.pages.dev/VUbMC',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Canva Mastery: From Basics to Advance',l:'https://imgyx.pages.dev/dWDqO',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Deepak Daiya Dynamic',l:'https://imgyx.pages.dev/biFe0',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Intermediate Video Editing',l:'https://imgyx.pages.dev/Or3aB',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Map Animation Masterclasses',l:'https://imgyx.pages.dev/kfIMA',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Mr Beast Editor',l:'https://imgyx.pages.dev/r4anO',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Rachit Singh Video Editing',l:'https://imgyx.pages.dev/6ZaYv',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Arpit Bhayani',l:'https://imgyx.pages.dev/VwOhf',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'CampusX',l:'https://imgyx.pages.dev/tTNVL',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Codebasics',l:'https://imgyx.pages.dev/HArGt',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Atlassian',l:'https://imgyx.pages.dev/30AcI',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'iNeuron',l:'https://imgyx.pages.dev/pL2gi',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Coding Wallah',l:'https://imgyx.pages.dev/v20Bx',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Love Babbar',l:'https://imgyx.pages.dev/gu1N2',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'PW Skills',l:'https://files.catbox.moe/4bl6pv.jpg',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Aryan Singh',l:'https://imgyx.pages.dev/CG8kM',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Engineerchirag',l:'https://imgyx.pages.dev/yXXJb',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'AlgoCamp',l:'https://imgyx.pages.dev/hEdl2',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Genie Ashwani',l:'https://imgyx.pages.dev/z2fPB',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Code with Harry',l:'https://imgyx.pages.dev/iBKDu',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Hitesh Chaudhary',l:'https://imgyx.pages.dev/Sfo0V',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Sketch Book By Abhishek',l:'https://i.postimg.cc/pybKhcQf/Sketchbook-By-Abhishek.png',t:'web',url:'https://asmultiverse.app/?tab=home&app=6a3d1c9cd754c8894bf5812a'}]},
   {id:'codexstudy2',name:'CodexStudy 2.0',logo:'https://files.catbox.moe/psl8ym.jpg',plats:[
     {n:'Physics Wallah',l:L.pw,t:'web',url:'https://codexstudy.dpdns.org/pw/'},
     {n:'Selection Way',l:L.sw,t:'web',url:'https://codexstudy.dpdns.org/sw/'}]},
@@ -1948,6 +1993,7 @@ const PROV=[
     {n:'CDS Journey',l:L.cds,t:'web',url:'https://cds.streamfiles.eu.org/'},
     {n:'Selection Way',l:L.sw,t:'web',url:'https://selectionway.streamfiles.eu.org/'},
     {n:'Vidyakul',l:L.vk,t:'web',url:'https://vidyakool.streamfiles.eu.org/'},
+    {n:'Allen',l:L.al,t:'web',url:'https://others.streamfiles.eu.org/allen/'},
     {n:'IIT School',l:L.iit,t:'web',url:'https://others.streamfiles.eu.org/iit/'},
     {n:'Next Topper',l:L.nt,t:'web',url:'https://nt.streamfiles.eu.org/'},
     {n:'Mission Jeet',l:L.mj,t:'web',url:'https://mj.streamfiles.eu.org/'},
@@ -1973,23 +2019,45 @@ const PROV=[
     {n:'Physics Wallah',l:L.pw,t:'web',url:'https://pw-rex.fast-page.org'},
     {n:'Next Topper',l:L.nt,t:'web',url:'https://NT-ReX.Lovable.App'}]},
   {id:'nexthope',name:'NextHope',logo:'https://i.ibb.co/v4k8LdYN/nexthope.png',plats:[
-    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://pw.nexthope.site/'},
-    {n:'Next Topper',l:L.nt,t:'web',url:'https://nt.nexthope.site/'},
-    {n:'Mission Jeet',l:L.mj,t:'web',url:'https://nexthope.pages.dev/mj/'},
-    {n:'Unacademy',l:L.un,t:'web',url:'https://nexthope.pages.dev/unacademy/'},
-    {n:'Unacademy Offline',l:L.un,t:'web',url:'https://nexthope.pages.dev/uncoffline/'},
-    {n:'Vibrant Academy',l:L.va,t:'web',url:'https://vb.nexthope.site/'},
-    {n:'Career Will',l:L.cw,t:'web',url:'https://careerwill.nexthope.site/'},
-    {n:'Selection Way',l:L.sw,t:'web',url:'https://nexthope.pages.dev/sw/'},
-    {n:'Rojgar With Ankit',l:L.rwa,t:'web',url:'https://nexthope.pages.dev/rwa/'},
-    {n:'GS Vision',l:'https://files.catbox.moe/mzecv5.png',t:'web',url:'https://nexthope.pages.dev/gsvision/'},
-    {n:'Future Kul',l:'https://files.catbox.moe/ck8uz5.png',t:'web',url:'https://nexthope.pages.dev/futurekul/'},
-    {n:'Pinnacle Books',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://nexthope.pages.dev/pinnacle/'},
-    {n:'Sachin Classes',l:'https://i.ibb.co/n8PJXJ5X/Screenshot-2026-08-28-16-25-52-876-com-android-chrome.png',t:'web',url:'https://sachin.nexthope.site'},
-    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://vidya.nexthope.site/'},
-    {n:'Yes Officer',l:'https://iili.io/Cm8DWen.jpg',t:'web',url:'https://yesofficer.nexthope.site/'},
-    {n:'Target Board',l:L.tb,t:'web',url:'https://tb.nexthope.site/'},
-    {n:'Toppers Wisdom',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://tw.nexthope.site/'}]},
+    {n:'Next Topper',l:L.nt,t:'web',url:'https://nt.nexthope.cc.cd/'},
+    {n:'Mission Jeet',l:L.mj,t:'web',url:'https://nexthope.cc.cd/mj/'},
+    {n:'Unacademy',l:L.un,t:'web',url:'https://nexthope.cc.cd/unacademy/'},
+    {n:'Unacademy Offline',l:L.un,t:'web',url:'https://nexthope.cc.cd/uncoffline/'},
+    {n:'Vibrant Academy',l:L.va,t:'web',url:'https://vb.nexthope.cc.cd/'},
+    {n:'Career Will',l:L.cw,t:'web',url:'https://careerwill.nexthope.cc.cd/'},
+    {n:'Selection Way',l:L.sw,t:'web',url:'https://nexthope.cc.cd/sw/'},
+    {n:'Rojgar With Ankit',l:L.rwa,t:'web',url:'https://nexthope.cc.cd/rwa/'},
+    {n:'GS Vision',l:'https://files.catbox.moe/mzecv5.png',t:'web',url:'https://nexthope.cc.cd/gsvision/'},
+    {n:'Future Kul',l:'https://files.catbox.moe/ck8uz5.png',t:'web',url:'https://nexthope.cc.cd/futurekul/'},
+    {n:'Pinnacle Books',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://nexthope.cc.cd/pinnacle/'},
+    {n:'Sachin Classes',l:'https://i.ibb.co/n8PJXJ5X/Screenshot-2026-08-28-16-25-52-876-com-android-chrome.png',t:'web',url:'https://sachin.nexthope.cc.cd/'},
+    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://vidya.nexthope.cc.cd/'},
+    {n:'Yes Officer',l:'https://iili.io/Cm8DWen.jpg',t:'web',url:'https://yesofficer.nexthope.cc.cd/'},
+    {n:'Target Board',l:L.tb,t:'web',url:'https://tb.nexthope.cc.cd/'},
+    {n:'Toppers Wisdom',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://tw.nexthope.cc.cd/'}]},
+  {id:'pwnexus',name:'PW Nexus',logo:'https://files.catbox.moe/kxt4x7.jpg',plats:[
+    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://s2-cdn.pwnexus.eu.cc/study/batches'},
+    {n:'Physics Wallah 2',l:L.pw,t:'web',url:'https://physicswallah.studynexus.dpdns.org/study/batches'},
+    {n:'Pi',l:L.pipro,t:'web',url:'https://pwnexus.eu.cc/pi-ott'},
+    {n:'Pi 2',l:L.pipro,t:'web',url:'https://s2-cdn.pwnexus.eu.cc/study/pi'},
+    {n:'PW Infinity Practice',l:L.pw,t:'web',url:'https://pwnexus.eu.cc/pw-infinity-practice'},
+    {n:'Next Topper',l:L.nt,t:'web',url:'https://pwnexus.eu.cc/next-topper'},
+    {n:'Mission Jeet',l:L.mj,t:'web',url:'https://pwnexus.eu.cc/mission-jeet'},
+    {n:'Just Padhle',l:'https://i.ibb.co/fdZ4rc6F/10266.jpg',t:'web',url:'https://pwnexus.eu.cc/just-padhle'},
+    {n:'Vibrant Academy',l:L.va,t:'web',url:'https://pwnexus.eu.cc/vibrant-academy'},
+    {n:'Unacademy',l:L.un,t:'web',url:'https://pwnexus.eu.cc/unacademy'},
+    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://pwnexus.eu.cc/vidyagram'},
+    {n:'Unacademy Offline',l:L.un,t:'web',url:'https://pwnexus.eu.cc/unacademy-offline'},
+    {n:'Selection Way',l:L.sw,t:'web',url:'https://pwnexus.eu.cc/selection-way'},
+    {n:'Topper Wisdom',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://pwnexus.eu.cc/topper-wisdom'},
+    {n:'Future Kul',l:'https://files.catbox.moe/ck8uz5.png',t:'web',url:'https://pwnexus.eu.cc/future-kul'},
+    {n:'Rojgar with Ankit',l:L.rwa,t:'web',url:'https://pwnexus.eu.cc/rojgar-with-ankit'},
+    {n:'Master Sahab',l:L.msahab,t:'web',url:'https://pwnexus.eu.cc/master-sahab'},
+    {n:'Khan Global',l:L.kgs,t:'web',url:'https://pwnexus.eu.cc/khan-global'},
+    {n:'Apna College',l:L.ac,t:'web',url:'https://pwnexus.eu.cc/apna-college'},
+    {n:'Pinnacle Book',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://pwnexus.eu.cc/pinnacle-book'},
+    {n:'Career Will',l:L.cw,t:'web',url:'https://pwnexus.eu.cc/career-will'},
+    {n:'Study IQ',l:L.siq,t:'web',url:'https://pwnexus.eu.cc/study-iq'}]},
   {id:'rarestudy',name:'Rare Study',logo:'https://files.catbox.moe/sso18v.jpg',plats:[
     {n:'Physics Wallah',l:L.pw,t:'web',url:'https://rarestudy.testuk.org/keygenerate'},
     {n:'Next Topper',l:L.nt,t:'web',url:'https://nt.testuk.org/keygenerate'},
@@ -2026,7 +2094,29 @@ const PROV=[
     {n:'Banking',l:'https://imgyx.pages.dev/HMVE4',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
     {n:'BSc Nursing',l:'https://imgyx.pages.dev/dvZrR',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
     {n:'UPSC',l:'https://imgyx.pages.dev/56DA7',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
-    {n:'Defense',l:'https://imgyx.pages.dev/xa1lZ',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'}]},
+    {n:'Defense',l:'https://imgyx.pages.dev/xa1lZ',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
+    {n:'NickZ Editing',l:'https://imgyx.pages.dev/lSm3X',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Basic Video Editing',l:'https://imgyx.pages.dev/VUbMC',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Canva Mastery: From Basics to Advance',l:'https://imgyx.pages.dev/dWDqO',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Deepak Daiya Dynamic',l:'https://imgyx.pages.dev/biFe0',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Intermediate Video Editing',l:'https://imgyx.pages.dev/Or3aB',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Map Animation Masterclasses',l:'https://imgyx.pages.dev/kfIMA',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Mr Beast Editor',l:'https://imgyx.pages.dev/r4anO',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Rachit Singh Video Editing',l:'https://imgyx.pages.dev/6ZaYv',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Arpit Bhayani',l:'https://imgyx.pages.dev/VwOhf',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'CampusX',l:'https://imgyx.pages.dev/tTNVL',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Codebasics',l:'https://imgyx.pages.dev/HArGt',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Atlassian',l:'https://imgyx.pages.dev/30AcI',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'iNeuron',l:'https://imgyx.pages.dev/pL2gi',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Coding Wallah',l:'https://imgyx.pages.dev/v20Bx',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Love Babbar',l:'https://imgyx.pages.dev/gu1N2',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'PW Skills',l:'https://files.catbox.moe/4bl6pv.jpg',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Aryan Singh',l:'https://imgyx.pages.dev/CG8kM',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Engineerchirag',l:'https://imgyx.pages.dev/yXXJb',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'AlgoCamp',l:'https://imgyx.pages.dev/hEdl2',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Genie Ashwani',l:'https://imgyx.pages.dev/z2fPB',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Code with Harry',l:'https://imgyx.pages.dev/iBKDu',t:'web',url:'https://app.akkistudyx.in/app?view=home'},
+    {n:'Hitesh Chaudhary',l:'https://imgyx.pages.dev/Sfo0V',t:'web',url:'https://app.akkistudyx.in/app?view=home'}]},
   {id:'itrms',name:'ITRMS',logo:'https://files.catbox.moe/5lzb53.jpg',plats:[
     {n:'Vibrant Academy',l:L.va,t:'web',url:'https://vibrant.nextmate.site/'},
     {n:'RG Vikramjeet',l:L.rgv,t:'web',url:'https://rgvikramjeet.nextmate.site/'},
@@ -2045,7 +2135,7 @@ const PROV=[
     {n:'Vidyakul',l:L.vk,t:'bot',url:'http://t.me/Study_Ratna_LiteBot/app'},
     {n:'Next Topper',l:L.nt,t:'bot',url:'http://t.me/Study_Ratna_LiteBot/app'}]},
   {id:'studypanda',name:'Study Panda',logo:'https://files.catbox.moe/09tz78.jpg',plats:[
-    {n:'Physics Wallah',l:L.pw,t:'web',url:'http://physicswalla.studypanda.live'},
+    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://pw.studypanda.study/auth'},
     {n:'Next Topper',l:L.nt,t:'web',url:'https://studypanda.study/nt'},
     {n:'Mission Jeet',l:L.mj,t:'web',url:'https://studypanda.study/missionjeet'},
     {n:'Unacademy',l:L.un,t:'web',url:'https://studypanda.study/ud'},
@@ -2327,6 +2417,26 @@ const PROV=[
     {n:'Vibrant Academy',l:L.va,t:'web',url:'https://vibrant-academy.space-z.ai/'},
     {n:'Science & Fun',l:L.sf,t:'web',url:'https://science-and-fun.space-z.ai/'},
     {n:'Selection Way',l:L.sw,t:'web',url:'https://sw-studybison.space-z.ai/'}]},
+
+  {id:'ogspectrum',name:'OG Spectrum',logo:'https://files.catbox.moe/9u9q0p.jpg',plats:[
+    {n:'Next Toppers',l:L.nt,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Mission Jeet',l:L.mj,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Vibrant Academy',l:L.va,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'PI Pro',l:L.pipro,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Rojgar With Ankit',l:L.rwa,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Unacademy Online',l:L.un,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Unacademy Offline',l:L.un,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Master Sahab',l:L.msahab,t:'web',url:'https://og-edu-pro.ai.studio/'},
+    {n:'Apna College',l:L.ac,t:'web',url:'https://og-edu-pro.ai.studio/'}]},
+  {id:'invalidstudy',name:'Invalid Study',logo:'https://files.catbox.moe/tjykhz.png',plats:[
+    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://invalidstudyyy.onrender.com/PW'},
+    {n:'Next Topper',l:L.nt,t:'web',url:'https://invalidstudyyy.onrender.com/NT'},
+    {n:'Mission Jeet',l:L.mj,t:'web',url:'https://invalidstudyyy.onrender.com/MJ'}]},
+  {id:'edulearnx',name:'Edu LearnX',logo:'https://files.catbox.moe/m7rj6u.jpg',plats:[
+    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://edulearnx-official.vercel.app/'},
+    {n:'Next Topper',l:L.nt,t:'web',url:'https://edulearnx-official.vercel.app/'},
+    {n:'Mission Jeet',l:L.mj,t:'web',url:'https://edulearnx-official.vercel.app'}]},
 ];
 
 const QS=[
@@ -3416,17 +3526,323 @@ function getAI(rawMsg){
     actions:[],
   };
 }
+/* ══════════ CODEX AI v2 — live-data brain ══════════
+   Knows every provider/platform/link from PROV + STUDY_HUBS at runtime (never stale),
+   understands Hinglish + typos, remembers the last topic, answers exam questions,
+   explains site features, does math/date, and falls back to Wikipedia for general knowledge. */
+const A2={ctx:null};
+const A2_ABBR={pw:'physics wallah',nt:'next topper',mj:'mission jeet',va:'vibrant academy',vt:'vibrant academy',sw:'selection way',un:'unacademy',uno:'unacademy offline',vk:'vidyakul',rwa:'rojgar with ankit',kgs:'kgs',siq:'study iq',ac:'apna college',cw:'career will',tb:'target board',cds:'cds journey',gsv:'gs vision',fk:'future kul',rgv:'rg vikramjeet',tw:'topper wisdom',mb:'magnet brain',vibrant:'vibrant academy',unacadamy:'unacademy',physicswallah:'physics wallah',alakh:'physics wallah'};
+const A2_CANON={'pw':'physics wallah','lite pw':'physics wallah','physicswallah':'physics wallah','next toppers':'next topper','toppers wisdom':'topper wisdom','khan global studies':'kgs','khan global':'kgs','kgs test':'kgs','pi pro':'pi','pw pi':'pi','pw infinity practice':'infinite practice','unacademy online':'unacademy','rwa':'rojgar with ankit','sachin academy':'sachin classes','digital book':'digital books','digital book test':'digital books','vibrant':'vibrant academy'};
+const A2_PALIAS={'codexstudys':['codexstudy','codex studys','codex study','codex','cx'],'codexstudy2.0':['codexstudy 2','codexstudys 2','codex study 2','cx 2','codexstudy2'],'asmultiverse':['asm','as multiverse'],'nexthope':['next hope'],'deltastudy':['delta'],'spideyuniverse':['spidey','spidy','spiderman'],'studyrays':['study rays','rays'],'akkixstudy':['akki','akkix','akkistudy','akki study'],'pwnexus':['pw nexus','nexus'],'ogspectrum':['og spectrum','og edu'],'edulearnx':['edu learnx','edulearn'],'invalidstudy':['invalid study','invalid'],'studypanda':['study panda','panda'],'studybee':['study bee','bee'],'pwthor':['pw thor','thor'],'studyratna':['study ratna','ratna'],'learnbyapk':['learn by apk','learnbyakp'],'studyapkmod':['study apk mod','apk mod'],'rolexcoderz':['rolex','rolex coderz'],'pwmacro':['pw macro','macro'],'studystark':['study stark','stark'],'studyspark':['study spark']};
+const A2_EXAMS=[
+ {k:'jee',re:/\bjee\b|iit\b|iit jee|engineering/,label:'JEE (Main/Advanced)',g:['physics wallah','allen','vibrant academy','sarvam career institute','sarvam crash course','magnet brain','unacademy','mission jeet','pi'],dyn:['jee','iit']},
+ {k:'neet',re:/\bneet\b|medical|mbbs|aiims/,label:'NEET',g:['physics wallah','allen','unacademy','magnet brain','sarvam career institute','pi'],dyn:['neet','biology']},
+ {k:'cuet',re:/\bcuet\b/,label:'CUET',g:['physics wallah','unacademy'],dyn:['cuet']},
+ {k:'upsc',re:/\bupsc\b|\bias\b|civil serv/,label:'UPSC / IAS',g:['study iq','unacademy','gs vision'],dyn:['upsc','gs ']},
+ {k:'ssc',re:/\bssc\b|railway|rrb|\bntpc\b|\bcgl\b|\bchsl\b|police|sarkari/,label:'SSC / Railway / Govt exams',g:['selection way','rojgar with ankit','kgs','career will','study iq','pinnacle books','future kul'],dyn:['ssc','railway']},
+ {k:'bank',re:/bank|\bibps\b|\bsbi\b|\bpo\b/,label:'Banking',g:['selection way','study iq','career will','rojgar with ankit'],dyn:['banking']},
+ {k:'defence',re:/\bcds\b|\bnda\b|defen[cs]e|army|navy|afcat/,label:'CDS / NDA / Defence',g:['cds journey','study iq'],dyn:['defense','defence','cds','nda']},
+ {k:'boards',re:/board|class ?(9|10|11|12)|\b(9|10|11|12)(th|vi)?\b ?(class|board)|school|ncert|cbse|icse/,label:'School / Boards (Class 9-12)',g:['physics wallah','next topper','master sahab','target board','padhle akshay','just padhle','science and fun','science & fun','munil sir','vidyakul','magnet brain'],dyn:['board','class']},
+ {k:'coding',cat:1,re:/cod(e|ing)|program|dsa|placement|developer|python|java|web ?dev|software|tech/,label:'Coding / Tech',g:['apna college'],names:['Love Babbar','Code with Harry','Codebasics','CampusX','Arpit Bhayani','Coding Wallah','Engineerchirag','AlgoCamp','iNeuron','Hitesh Chaudhary','Aryan Singh','Atlassian','Genie Ashwani'],dyn:['coding']},
+ {k:'editing',cat:1,re:/edit|canva|animation|mr ?beast|video edit/,label:'Video Editing / Design',g:[],names:['NickZ Editing','Basic Video Editing','Intermediate Video Editing','Canva Mastery: From Basics to Advance','Deepak Daiya Dynamic','Map Animation Masterclasses','Mr Beast Editor','Rachit Singh Video Editing','Video Editing'],dyn:[]},
+ {k:'english',cat:1,re:/english|speaking|aleena/,label:'English Speaking',g:[],names:['English Speaking (Aleena Rais)','Aleena Rais'],dyn:['english']},
+ {k:'mht',re:/mht ?cet|maharashtra cet/,label:'MHT-CET',g:[],dyn:['mhtcet']}
+];
+const A2_STOP=new Set('ka ki ke ko me mein mai se par pe hai hain h hu hun kya kaun kon kahan kaha kaise kyu kyun kitne kitna kuch sab saare sare list batao bata do de dena dikhao show give tell about explain what who is are was the a an of in on for to and or aur ya please plz yaar bhai bro mujhe muje mereko chahiye chaiye ho hota hoti hote wala wali samjhao samjha meaning matlab define definition information info jaankari baare bare ke liye'.split(' '));
+function a2norm(s){return s.toLowerCase().replace(/[^\p{L}\p{N}\s&+.\-]/gu,' ').replace(/\s+/g,' ').trim();}
+function a2esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function a2lev(a,b){if(a===b)return 0;const m=a.length,n=b.length;if(!m||!n)return Math.max(m,n);let p=Array.from({length:n+1},(_,i)=>i);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c;}return p[n];}
+function a2canon(n){let c=n.toLowerCase().replace(/\(.*?\)/g,'').replace(/\s+\d+(\.\d+)?$/,'').replace(/\s+/g,' ').trim();return A2_CANON[c]||c;}
+function a2all(){
+  const map=new Map();
+  const add=(p,src)=>{const k=p.name.toLowerCase().replace(/\s+/g,'');
+    if(!map.has(k))map.set(k,{key:k,name:p.name,best:!!p.best,note:p.note||'',src,plats:[]});
+    const e=map.get(k);if(p.best)e.best=true;
+    (p.plats||[]).forEach(pl=>{const id=(pl.url||pl.gate||pl.apk||'');if(!e.plats.some(x=>x.n===pl.n&&(x.url||x.gate||x.apk||'')===id))e.plats.push(pl);});};
+  PROV.forEach(p=>add(p,'prov'));
+  if(typeof STUDY_HUBS!=='undefined')STUDY_HUBS.forEach(p=>add(p,'hub'));
+  return [...map.values()];
+}
+function a2chip(pl,label){
+  const url=pl.url||pl.apk||null;if(!url&&!pl.gate)return null;
+  const suf=pl.t==='bot'?' 🤖':((pl.t==='app'||(!pl.url&&pl.apk))?' 📱':'');
+  return {label:(label||pl.n)+suf,url:pl.gate?null:url,gate:pl.gate||null};
+}
+function a2hasWord(padded,w){return padded.includes(' '+w+' ');}
+function a2find(m){
+  const all=a2all(),padded=' '+m+' ',ns=m.replace(/\s+/g,'');
+  /* provider */
+  let prov=null,ps=0,pc='';
+  all.forEach(e=>{
+    const sp=a2norm(e.name);const cands=[[sp,'w'],[e.key,'n']].concat((A2_PALIAS[e.key]||[]).map(a=>[a,'w']));
+    cands.forEach(([c,t])=>{
+      if(!c||c.length<3)return;
+      const hit=t==='w'?a2hasWord(padded,c):(c.length>=6&&ns.includes(c));
+      if(hit&&c.length>ps){ps=c.length;prov=e;pc=c;}
+    });
+  });
+  /* platform */
+  const names=new Map();
+  all.forEach(e=>e.plats.forEach(pl=>{const raw=pl.n.toLowerCase().replace(/\(.*?\)/g,'').replace(/\s+\d+$/,'').trim();const cn=a2canon(pl.n);[raw,cn].forEach(x=>{if(x&&x.length>=3)names.set(x,cn);});}));
+  Object.entries(A2_ABBR).forEach(([a,full])=>names.set(a,a2canon(full)));
+  let plat=null,pls=0;
+  names.forEach((cn,nm)=>{if(prov&&(' '+pc+' ').includes(' '+nm+' ')&&nm.length<pc.length)return;if(a2hasWord(padded,nm)&&nm.length>pls){
+    /* a provider's own name should not also count as a platform (e.g. 'study iq' fine, but skip if equal to matched provider) */
+    pls=nm.length;plat=cn;}});
+  /* fuzzy fallback (typos) */
+  if(!prov&&!plat){
+    const toks=m.split(' ').filter(t=>t.length>=5);
+    const pairs=toks.slice();for(let i=0;i<toks.length;i++){}
+    const words=m.split(' ');for(let i=0;i<words.length-1;i++)pairs.push(words[i]+words[i+1]);
+    let best=null,bd=9;
+    pairs.forEach(t=>{
+      all.forEach(e=>{[e.key].concat((A2_PALIAS[e.key]||[]).map(a=>a.replace(/\s/g,''))).forEach(c=>{if(c.length<5)return;const d=a2lev(t,c),lim=c.length>=8?2:1;if(d<=lim&&d<bd){bd=d;best={t:'p',v:e};}});});
+      names.forEach((cn,nm)=>{const c=nm.replace(/\s/g,'');if(c.length<5)return;const d=a2lev(t,c),lim=c.length>=8?2:1;if(d<=lim&&d<bd){bd=d;best={t:'l',v:cn};}});
+    });
+    if(best){if(best.t==='p')prov=best.v;else plat=best.v;}
+  }
+  /* if the matched "platform" is really just the provider's own name, keep provider only */
+  if(prov&&plat&&a2canon(prov.name)===plat&&!prov.plats.some(p=>a2canon(p.n)===plat))plat=null;
+  return {prov,plat,all};
+}
+function a2platProviders(all,canon){
+  const out=[];
+  all.forEach(e=>{const hits=e.plats.filter(pl=>a2canon(pl.n)===canon||pl.n.toLowerCase().includes(canon));if(hits.length)out.push({e,hits});});
+  out.sort((a,b)=>(b.e.best-a.e.best)||(b.hits.length-a.hits.length));
+  return out;
+}
+function a2bestLink(all,canon){
+  const pv=a2platProviders(all,canon);
+  for(const {e,hits} of pv){const h=hits.find(x=>x.url||x.gate)||hits[0];const c=a2chip(h,null);if(c)return {chip:c,prov:e.name};}
+  return null;
+}
+function a2title(s){return s.replace(/\b\w/g,c=>c.toUpperCase()).replace(/\b(Iq|Kgs|Cds|Rwa|Pw|Nt|Mj|Cw|Rg|Gs|Mht|Cet)\b/g,x=>x.toUpperCase());}
+function a2provReply(e){
+  const chips=[];const rest=[];
+  e.plats.forEach(pl=>{const c=a2chip(pl);if(c&&chips.length<26)chips.push(c);else rest.push(pl.n);});
+  const types={web:0,bot:0,apk:0};e.plats.forEach(p=>{if(p.t==='bot')types.bot++;else if(p.t==='app'||(!p.url&&p.apk))types.apk++;else types.web++;});
+  let t=`📌 **${e.name}** — ${e.plats.length} platform${e.plats.length>1?'s':''}`+(e.best?' ⭐ (Best)':'')+`\n🌐 Web: ${types.web}${types.bot?' • 🤖 Bot: '+types.bot:''}${types.apk?' • 📱 APK: '+types.apk:''}`;
+  if(e.note)t+=`\n${e.note}`;
+  if(/airtel|vi\b/.test(e.key)||['studystark','powerstudy'].includes(e.key))t+=`\n⚠️ Airtel/Vi users VPN use karein.`;
+  t+=`\n\nNeeche tap karke seedha kholo 👇`;
+  if(rest.length)t+=`\n\n(Baaki: ${rest.join(', ')})`;
+  return {text:t,actions:chips};
+}
+function a2platReply(all,canon){
+  const pv=a2platProviders(all,canon);
+  if(!pv.length)return null;
+  const chips=[];const rest=[];
+  pv.forEach(({e,hits})=>{
+    const take=e.best?hits.length:Math.min(hits.length,2);
+    let added=false;
+    hits.slice(0,take).forEach(h=>{const c=a2chip(h,e.name+(hits.length>1?' – '+h.n:''));if(c&&chips.length<30){chips.push(c);added=true;}});
+    if(!added)rest.push(e.name);
+  });
+  const tot=pv.length;
+  let t=`🎓 **${a2title(canon)}** — ${tot} provider${tot>1?'s':''} par mil raha hai.\n⭐ Pehle try karo: **${pv[0].e.name}**\n📱 = APK, 🤖 = Telegram bot, baaki sab web.\n\nChoose karo 👇`;
+  if(rest.length)t+=`\n\n(Baaki providers: ${rest.join(', ')} — naam likho to unka link dunga)`;
+  return {text:t,actions:chips};
+}
+function a2remember(o){A2.ctx=o;}
+function a2overview(){
+  const all=a2all();const plats=all.reduce((s,e)=>s+e.plats.length,0);
+  const apks=all.reduce((s,e)=>s+e.plats.filter(p=>p.apk).length,0);
+  const uniq=new Set();all.forEach(e=>e.plats.forEach(p=>uniq.add(a2canon(p.n))));
+  return `🤖 Main **CodeX AI** hoon — is site ka poora live data mujhe pata hai:\n• ${all.length} providers • ${plats} platform links • ${uniq.size} alag courses/platforms • ${apks} APKs\n\nMain ye sab kar sakta hu:\n• Kisi bhi provider/platform ka seedha link (typo ho tab bhi)\n• "X vs Y" compare, best/recommend\n• JEE, NEET, CUET, UPSC, SSC, CDS, Boards, Coding ke liye platforms\n• Key, VPN, APK, Telegram, mock test, notes help\n• Site features (themes, timer, notes, exam countdown)\n• Math, date/time\n• Koi bhi general sawaal — Wikipedia se jawab (internet chahiye)`;
+}
+function a2features(m){
+  if(/theme|dark|light mode|colou?r|rang/.test(m)){const n=(typeof THEMES!=='undefined')?THEMES.length:'kai';const nm=(typeof THEMES!=='undefined')?THEMES.map(t=>t.name).join(', '):'';return {text:`🎨 ${n} themes hain: ${nm}.\nTop bar mein 🌙 button se Dark/Light badlo, ya theme picker se apna favourite chuno.`,actions:[]};}
+  if(/pomodoro|timer|focus|study timer/.test(m))return {text:'⏱️ Pomodoro Timer: Profile page → Tools mein hai (25:00 focus session). START dabao, ring chalta dikhega aur profile pe "running" status aayega.',actions:[]};
+  if(/note|notepad|todo|ideas/.test(m)&&!/notes? (pdf|material)/.test(m)&&/(app|site|yaha|yahan|tool|save|likh|write|notepad|todo)/.test(m))return {text:'📝 Notes: 3 tabs hain — 📌 Study, 💡 Ideas, 📋 Todo. Auto-save hota hai, characters count bhi dikhta hai. Profile → Tools se kholo.',actions:[]};
+  if(/mood/.test(m))return {text:'😊 Mood Tracker: Profile page par emoji chuno, aaj ka mood save ho jata hai.',actions:[]};
+  if(/streak/.test(m))return {text:'🔥 Streak: Profile mein weekly streak dots dikhte hain (aaj ka din highlight). Roz site kholo aur padho!',actions:[]};
+  if(/countdown|exam date|days left|kitne din/.test(m))return {text:'⏳ Home page par exam countdown cards hain (jaise CUET UG 2027). Profile → Exams mein apna exam (JEE, NEET, GATE, CAT...) aur platform set kar sakte ho.',actions:[]};
+  if(/search|dhund|find/.test(m)&&/(bar|box|option|kaise|where|kahan)/.test(m))return {text:'🔍 Home page ke search bar mein "Search provider or platform..." likho — abbreviations (pw, nt, mj, rwa...) bhi chalte hain.',actions:[]};
+  if(/weather|mausam/.test(m))return {text:'🌦️ Weather widget location ke hisaab se Open-Meteo se live data leta hai.',actions:[]};
+  if(/ping|speed|network|internet/.test(m)&&!/wikipedia/.test(m))return {text:'📶 Profile → Stats/Tools mein Network + real PING check hai jisse pata chalta hai connection kaisa hai.',actions:[]};
+  if(/study hub|resources? tab|hub/.test(m)){const n=(typeof STUDY_HUBS!=='undefined')?STUDY_HUBS.length:'';return {text:`📚 Resources tab (Study Hub) mein ${n} sections hain — books, test series, MHT-CET, periodic table jaise extra resources. Bottom bar se Resources kholo.`,actions:[]};}
+  return null;
+}
+function a2exam(m,all){
+  const ex=A2_EXAMS.filter(x=>x.re.test(m));
+  if(!ex.length)return null;
+  if(ex.length>1&&ex[0].k==='ssc'&&ex[1].k==='bank')ex.length=2;
+  const x=ex[0];const chips=[];const lines=[];
+  (x.g||[]).forEach(g=>{const b=a2bestLink(all,a2canon(g));if(b&&chips.length<20){chips.push({label:a2title(g)+' ('+b.prov+')',url:b.chip.url,gate:b.chip.gate});}});
+  (x.names||[]).forEach(nm=>{all.forEach(e=>e.plats.forEach(pl=>{if(pl.n===nm&&chips.length<26&&!chips.some(c=>c.label.startsWith(nm))){const c=a2chip(pl,nm);if(c)chips.push(c);}}));});
+  const seen=new Set(chips.map(c=>c.label.toLowerCase()));
+  (x.dyn||[]).forEach(w=>{all.forEach(e=>e.plats.forEach(pl=>{if(chips.length>=26)return;if(new RegExp('\\b'+w.trim()+'\\b','i').test(pl.n)){const c=a2chip(pl,pl.n+' ('+e.name+')');if(c&&!seen.has(c.label.toLowerCase())){seen.add(c.label.toLowerCase());chips.push(c);}}}));});
+  if(!chips.length)return {text:`🤔 ${x.label} ke liye abhi site par dedicated platform nahi mila. Telegram channel mein pucho ya Resources tab dekho.`,actions:[{label:'Telegram',url:'https://t.me/codexstudys'}]};
+  let t=`🎯 **${x.label}** ke liye ye platforms generally popular hain (site par seedha links):`;
+  if(x.k==='neet')t+=`\n\n💡 Tip: NCERT + PYQ + test series ka combo rakho.`;
+  if(x.k==='jee')t+=`\n\n💡 Tip: PW/Allen type batch + PYQ practice (Infinite Practice) best rehta hai.`;
+  if(x.k==='coding')t+=`\n\n💡 Tip: pehle ek language chuno, phir DSA + projects.`;
+  t+=`\n\nTap karke kholo 👇`;
+  a2remember({type:'exam',x});
+  return {text:t,actions:chips};
+}
+function a2compare(m,all){
+  const mm=m.match(/(.+?)\s+(?:vs|versus|ya|or|aur)\s+(.+?)(?:\s+(?:me|mein|compare|kaun|konsa|kaunsa|better|best|accha|acha)\b.*)?$/);
+  let a,b;
+  if(mm){a=mm[1];b=mm[2];}else if(m.includes('compare')){const p=m.replace(/compare|karo|kro/g,'').split(/\s+(?:aur|and|,|vs)\s+/).map(s=>s.trim()).filter(Boolean);if(p.length>=2){a=p[0];b=p[1];}}
+  if(!a||!b)return null;
+  const fa=a2find(a2norm(a.replace(/^(compare|kaun|konsa)\s+/,''))),fb=a2find(a2norm(b));
+  if(fa.prov&&fb.prov&&fa.prov!==fb.prov){
+    const pa=fa.prov,pb=fb.prov;
+    const sa=new Set(pa.plats.map(p=>a2canon(p.n))),sb=new Set(pb.plats.map(p=>a2canon(p.n)));
+    const common=[...sa].filter(x=>sb.has(x));
+    const winner=pa.plats.length===pb.plats.length?'Dono barabar hain!':(pa.plats.length>pb.plats.length?pa.name:pb.name)+' ke paas zyada platforms hain.';
+    const first=(e)=>{const h=e.plats.find(p=>p.url||p.gate);return h?a2chip(h,e.name+' → '+h.n):null;};
+    return {text:`⚖️ **${pa.name}** vs **${pb.name}**\n• ${pa.name}: ${pa.plats.length} platforms${pa.best?' ⭐':''}\n• ${pb.name}: ${pb.plats.length} platforms${pb.best?' ⭐':''}\n• Common: ${common.length?common.map(a2title).join(', '):'koi nahi'}\n\n${winner}`,actions:[first(pa),first(pb)].filter(Boolean)};
+  }
+  if(fa.plat&&fb.plat&&fa.plat!==fb.plat){
+    const A=a2platProviders(all,fa.plat),B=a2platProviders(all,fb.plat);
+    const la=a2bestLink(all,fa.plat),lb=a2bestLink(all,fb.plat);
+    return {text:`⚖️ **${a2title(fa.plat)}** vs **${a2title(fb.plat)}**\n• ${a2title(fa.plat)}: ${A.length} providers par available\n• ${a2title(fb.plat)}: ${B.length} providers par available\n\nContent quality batch/teacher par depend karta hai — dono ka link neeche hai, demo lecture dekh ke decide karo.`,actions:[la&&{label:a2title(fa.plat)+' ('+la.prov+')',url:la.chip.url,gate:la.chip.gate},lb&&{label:a2title(fb.plat)+' ('+lb.prov+')',url:lb.chip.url,gate:lb.chip.gate}].filter(Boolean)};
+  }
+  return null;
+}
+function a2math(raw){
+  let s=raw.toLowerCase().replace(/,/g,'').replace(/(calculate|calc|kitna|kitne|hota|hoga|hai|equals?|what is|kya|solve|answer|batao|=|\?)/g,' ').replace(/×|\bx\b/g,'*').replace(/÷/g,'/').replace(/\^/g,'**').replace(/\s+/g,'');
+  const pct=raw.toLowerCase().match(/(\d+(?:\.\d+)?)\s*(?:%|percent)\s*(?:of|ka)\s*(\d+(?:\.\d+)?)/);
+  if(pct)return `${pct[1]}% of ${pct[2]} = ${+(parseFloat(pct[1])*parseFloat(pct[2])/100).toFixed(6)}`;
+  const sq=raw.toLowerCase().match(/(?:sqrt|square root|root)\s*(?:of)?\s*(\d+(?:\.\d+)?)/);
+  if(sq)return `√${sq[1]} = ${+Math.sqrt(parseFloat(sq[1])).toFixed(8)}`;
+  if(!/^[\d+\-*/().%]+$/.test(s)||!/\d/.test(s)||!/[+\-*/%]/.test(s.replace(/^-/,'')))return null;
+  try{const v=Function('"use strict";return ('+s+')')();if(typeof v==='number'&&isFinite(v))return `${raw.trim()} = ${+v.toFixed(8)}`;}catch(e){}
+  return null;
+}
+function a2datetime(m){
+  if(!/\b(time|date|tarikh|tareekh|samay|kitne baje|kya din|aaj ka din|today|what day|din)\b/.test(m))return null;
+  if(/(exam|batch|lecture|class|time table|timetable|study time)/.test(m))return null;
+  const d=new Date();
+  return `🕒 ${d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})}\n📅 ${d.toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}`;
+}
+async function a2wiki(q,lang){
+  const ctl=new AbortController();const to=setTimeout(()=>ctl.abort(),7000);
+  try{
+    const u=`https://${lang}.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=1&prop=extracts|info&exintro=1&explaintext=1&exsentences=4&inprop=url&redirects=1&format=json&origin=*`;
+    const r=await fetch(u,{signal:ctl.signal});const j=await r.json();
+    const pg=j&&j.query&&j.query.pages?Object.values(j.query.pages)[0]:null;
+    if(!pg||!pg.extract)return null;
+    return {title:pg.title,extract:pg.extract.trim(),url:pg.fullurl};
+  }catch(e){return null;}finally{clearTimeout(to);}
+}
+async function a2general(raw,m){
+  if(typeof navigator!=='undefined'&&navigator.onLine===false)return null;
+  const dev=/[\u0900-\u097F]/.test(raw);
+  let toks=m.split(' ').filter(t=>t&&!A2_STOP.has(t));
+  if(!toks.length)return null;
+  const q=toks.join(' ');
+  let res=await a2wiki(q,dev?'hi':'en');
+  if(!res&&dev)res=await a2wiki(q,'en');
+  if(!res)return null;
+  const hay=(res.title+' '+res.extract).toLowerCase();
+  const ok=toks.some(t=>t.length>=3&&hay.includes(t.slice(0,Math.max(3,t.length-1))));
+  if(!ok)return null;
+  let ex=res.extract.replace(/\s*\n+\s*/g,' ');if(ex.length>650)ex=ex.slice(0,650).replace(/\s+\S*$/,'')+'…';
+  return {text:`🌐 **${a2esc(res.title)}**\n${a2esc(ex)}\n\n(Source: Wikipedia — exact na lage to thoda detail mein pucho)`,actions:res.url?[{label:'Wikipedia page',url:res.url}]:[]};
+}
+function a2info(m,all){
+  if(/\bkey\b|keygen|verify|token/.test(m)&&!/(monkey|keyboard)/.test(m))return {text:AI_KB['key'],actions:[{label:'Telegram Channel',url:'https://t.me/codexstudys'}]};
+  if(/\bvpn\b/.test(m))return {text:AI_KB['vpn'],actions:[]};
+  if(/apk|download|install|app ?download/.test(m)){
+    const list=[];all.forEach(e=>e.plats.forEach(pl=>{if(pl.apk&&list.length<26){const c=a2chip({...pl,url:null},e.name+' – '+pl.n);if(c&&!list.some(x=>x.url===c.url&&x.label===c.label))list.push(c);}}));
+    return {text:`📱 **APK Downloads** — ${list.length}+ direct APK links site par hain (Sigma Study, Learn Free, AlphaStudySquad, Study Ratna bot...). Tap karke download karo:\n⚠️ Install ke liye "Unknown sources" allow karna pad sakta hai.`,actions:list};
+  }
+  if(/telegram|channel|youtube|whatsapp|social|join/.test(m))return {text:'📣 Official channels:\n• Telegram → t.me/codexstudys\n• YouTube → @CodexStudys\n• WhatsApp Channel\n• Notes / PYQ channels alag hain — Telegram mein pinned dekho.',actions:[{label:'Telegram',url:'https://t.me/codexstudys'},{label:'YouTube',url:'https://www.youtube.com/@CodexStudys'},{label:'WhatsApp',url:'https://whatsapp.com/channel/0029VbDI2CGEAKWNSoya5L2w'},{label:'Notes Channel',url:'https://t.me/+QFUBtiBV7BIxYTg1'},{label:'PYQ Channel',url:'https://t.me/+Cjc65o9aDEEwYWE1'}]};
+  if(/mock|test series|test portal|practice test/.test(m)){
+    const chips=[];all.forEach(e=>e.plats.forEach(pl=>{if(/test|practice|mock/i.test(pl.n)&&chips.length<14){const c=a2chip(pl,pl.n+' ('+e.name+')');if(c)chips.push(c);}}));
+    return {text:'🧪 Mock tests / practice: neeche site par available test platforms hain. (CodeX Mock Lab jaldi aa raha hai!)',actions:chips};
+  }
+  if(/\bnotes\b|\bpyq\b|previous year|material|pdf/.test(m))return {text:'📝 Notes + PYQ ke liye: Telegram notes/PYQ channels, Resources tab (Study Hub), aur StudyRays. Neeche links:',actions:[{label:'Notes Channel',url:'https://t.me/+QFUBtiBV7BIxYTg1'},{label:'PYQ Channel',url:'https://t.me/+Cjc65o9aDEEwYWE1'}]};
+  if(/website|official link|site link|share/.test(m))return {text:'🌐 Official: https://code-x-studys.vercel.app — doston ke saath share karo!',actions:[{label:'Website',url:'https://code-x-studys.vercel.app'}]};
+  return null;
+}
+function a2recommend(all,m){
+  const pool=all.filter(e=>e.best||e.plats.length>=6);
+  const e=pool[Math.floor(Math.random()*pool.length)]||all[0];
+  const chips=e.plats.slice(0,6).map(p=>a2chip(p)).filter(Boolean);
+  const top=[...all].sort((a,b)=>b.plats.length-a.plats.length).slice(0,3).map(x=>`${x.name} (${x.plats.length})`).join(', ');
+  return {text:`✨ Meri pick: **${e.name}** (${e.plats.length} platforms)${e.best?' ⭐':''}\nSabse zyada platforms: ${top}.\nStart yahan se 👇`,actions:chips};
+}
+async function getAIv2(raw){
+  const m=a2norm(raw);
+  if(!m)return {text:'Kuch toh likho! 😄',actions:[]};
+  const all=a2all();
+  /* social */
+  if(/^(hello|hi+|hey+|hlo|helo|namaste|namaskar|yo|hii+|salam|good (morning|evening|afternoon|night))\b/.test(m)&&m.split(' ').length<=4)return {text:pick(AI_GREETINGS),actions:[]};
+  if(/thank|shukriya|dhanyavaad|thanks|tysm|thnx/.test(m))return {text:pick(AI_THANKS),actions:[]};
+  if(/(who are you|tum kaun|aap kaun|tu kaun|kya kar sakte|what can you|help|madad|capabilit|kaise kaam)/.test(m)&&!/(provider|platform)/.test(m))return {text:a2overview(),actions:[]};
+  if(/^(bye|goodbye|alvida|tata|good night)/.test(m))return {text:'👋 Bye! Padhai karte raho, jab chaho wapas aana. All the best! 🚀',actions:[]};
+  /* utilities */
+  const mt=a2math(raw);if(mt)return {text:'🧮 '+mt,actions:[]};
+  const dt=a2datetime(m);if(dt)return {text:dt,actions:[]};
+  /* stats */
+  if(/(kitne|how many|total|stats|count|number of|sankhya)/.test(m)&&/(provider|platform|apk|link|course|batch|site)/.test(m)){
+    const plats=all.reduce((s,e)=>s+e.plats.length,0),apks=all.reduce((s,e)=>s+e.plats.filter(p=>p.apk).length,0);const u=new Set();all.forEach(e=>e.plats.forEach(p=>u.add(a2canon(p.n))));
+    return {text:`📊 Live stats:\n• Providers: ${all.length}\n• Platform links: ${plats}\n• Unique courses/platforms: ${u.size}\n• Direct APKs: ${apks}\nSab kuch abhi ke data se gina hai.`,actions:[]};
+  }
+  if(/(all|sab|saare|sare|full|poori|puri)\s*(provider|providers)|provider\s*list|providers?\s*(ki|ka)\s*list/.test(m))
+    return {text:`📋 **${all.length} providers**:\n`+all.map(e=>`${e.best?'⭐ ':''}${e.name} (${e.plats.length})`).join(', ')+`\n\nKisi ka naam likho — main uske saare links dunga.`,actions:[]};
+  /* compare */
+  if(/\b(vs|versus|compare)\b|\s(ya|or)\s/.test(' '+m+' ')){const c=a2compare(m,all);if(c)return c;}
+  /* features */
+  const ft=a2features(m);if(ft)return ft;
+  /* entity lookup */
+  let f=a2find(m);
+  const exq=A2_EXAMS.find(x=>x.re.test(m));
+  if(exq&&!f.prov&&(!f.plat||f.plat.length<=5||exq.cat)){const ex0=a2exam(m,all);if(ex0)return ex0;}
+  if(f.prov&&f.plat){
+    const hits=f.prov.plats.filter(pl=>a2canon(pl.n)===f.plat||pl.n.toLowerCase().includes(f.plat));
+    if(hits.length){a2remember({type:'both',prov:f.prov,plat:f.plat});return {text:`🔗 **${f.prov.name}** par **${a2title(f.plat)}**:`,actions:hits.map(h=>a2chip(h,f.prov.name+' – '+h.n)).filter(Boolean)};}
+    const r=a2platReply(all,f.plat);
+    if(r){a2remember({type:'plat',plat:f.plat});r.text=`🙁 **${f.prov.name}** par ${a2title(f.plat)} nahi mila. Ye options hain:\n\n`+r.text;return r;}
+  }
+  if(f.prov&&(!f.plat||!a2platProviders(all,f.plat).length)){a2remember({type:'prov',prov:f.prov});return a2provReply(f.prov);}
+  if(f.plat){const r=a2platReply(all,f.plat);if(r){a2remember({type:'plat',plat:f.plat});return r;}}
+  /* exams / categories */
+  const ex=a2exam(m,all);if(ex)return ex;
+  /* tools & info */
+  const inf=a2info(m,all);if(inf)return inf;
+  /* recommend */
+  if(/recommend|suggest|surprise|best|sabse (acha|accha|badhiya)|kuch (acha|accha)|konsa (lun|le|use)|kaunsa/.test(m))return a2recommend(all,m);
+  if(/\bfree\b/.test(m))return {text:'💯 CodeXStudys pe sab kuch FREE hai!\n'+a2overview().split('\n')[1].replace('• ','• ')+'\nNotes, PYQ, Test Series sab.',actions:[{label:'Join Telegram',url:'https://t.me/codexstudys'}]};
+  if(/codexstudys?|codex studys?|about|website kya|ye site|this site/.test(m)&&!/provider/.test(m))return {text:a2overview(),actions:[{label:'Telegram',url:'https://t.me/codexstudys'}]};
+  /* follow-up on previous topic */
+  if(A2.ctx&&A2.ctx.type!=='exam'&&/^(uska|iska|us ka|is ka|link|links|kholo|open|aur|more|isme|usme|inka|unka|dikhao|iske|uske)\b/.test(m)){
+    const c=A2.ctx;if(c.prov&&!c.plat)return a2provReply(c.prov);if(c.plat){const r=a2platReply(all,c.plat);if(r)return r;}
+  }
+  /* partial catalog search */
+  const q=m.split(' ').filter(t=>t.length>=3&&!A2_STOP.has(t));
+  if(q.length){
+    const hits=[];
+    all.forEach(e=>e.plats.forEach(pl=>{const hay=(pl.n+' '+e.name).toLowerCase();if(q.every(t=>hay.includes(t))&&hits.length<20){const c=a2chip(pl,pl.n+' ('+e.name+')');if(c)hits.push(c);}}));
+    if(hits.length&&q.join('').length>=4)return {text:`🔎 "${a2esc(raw)}" ke liye ye mila:`,actions:hits};
+  }
+  /* general knowledge */
+  const g=await a2general(raw,m);if(g)return g;
+  /* legacy fallback */
+  const lg=getAI(raw);
+  if(lg&&lg.text&&!/Seedha match nahi mila/.test(lg.text))return lg;
+  return {text:'🤔 Ye mujhe samajh nahi aaya'+((typeof navigator!=='undefined'&&navigator.onLine===false)?' (aur abhi internet bhi off hai, isliye general sawaal nahi kar sakta)':'')+'. Try karo:\n• "StudyRays ke links" / "Physics Wallah kahan milega"\n• "JEE ke liye best platform" / "coding courses"\n• "Delta vs Spidey" / "kitne platforms hain"\n• Ya koi bhi topic: "black hole kya hai", "25*4+10"',actions:[]};
+}
+
 function toggleAI(){const w=document.getElementById('ai-win');if(w)w.classList.toggle('open');}
 function askAI(q){const inp=document.getElementById('ai-inp');if(inp)inp.value=q;sendAI();}
 function sendAI(){
   const inp=document.getElementById('ai-inp');const msg=inp?inp.value.trim():'';if(!msg)return;
   if(inp)inp.value='';addMsg(msg,'usr');const typ=addTyp();
-  setTimeout(()=>{typ.remove();const r=getAI(msg);addMsg(r.text,'bot',r.actions);},450+Math.random()*450);
+  const t0=Date.now();
+  Promise.resolve().then(()=>getAIv2(msg)).catch(()=>getAI(msg)).then(r=>{
+    const wait=Math.max(0,400-(Date.now()-t0));
+    setTimeout(()=>{if(typ)typ.remove();addMsg(r.text,'bot',r.actions);},wait);
+  });
 }
 function addMsg(t,tp,actions){
   const d=document.getElementById('ai-msgs');if(!d)return null;
   const m=document.createElement('div');m.className='ai-msg '+tp;
-  m.innerHTML=t.replace(/\n/g,'<br>')+(actions&&actions.length?`<div class="ai-actions">${actions.map(aiActionChip).join('')}</div>`:'');
+  m.innerHTML=(tp==='usr'?String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):String(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')).replace(/\n/g,'<br>')+(actions&&actions.length?`<div class="ai-actions">${actions.map(aiActionChip).join('')}</div>`:'');
   d.appendChild(m);d.scrollTop=d.scrollHeight;return m;
 }
 function addTyp(){
@@ -3438,7 +3854,7 @@ function addTyp(){
 function addMsgPage(t,tp,actions){
   const d=document.getElementById('ai-msgs-page');if(!d)return;
   const m=document.createElement('div');m.className='ai-msg '+tp;
-  m.innerHTML=t.replace(/\n/g,'<br>')+(actions&&actions.length?`<div class="ai-actions">${actions.map(aiActionChip).join('')}</div>`:'');
+  m.innerHTML=(tp==='usr'?String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):String(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')).replace(/\n/g,'<br>')+(actions&&actions.length?`<div class="ai-actions">${actions.map(aiActionChip).join('')}</div>`:'');
   d.appendChild(m);d.scrollTop=d.scrollHeight;
 }
 function addTypPage(){
@@ -3451,7 +3867,11 @@ function askAIPage(q){const inp=document.getElementById('ai-inp-page');if(inp)in
 function sendAIPage(){
   const inp=document.getElementById('ai-inp-page');const msg=inp?inp.value.trim():'';if(!msg)return;
   if(inp)inp.value='';addMsgPage(msg,'usr');const typ=addTypPage();
-  setTimeout(()=>{if(typ)typ.remove();const r=getAI(msg);addMsgPage(r.text,'bot',r.actions);},500+Math.random()*400);
+  const t0=Date.now();
+  Promise.resolve().then(()=>getAIv2(msg)).catch(()=>getAI(msg)).then(r=>{
+    const wait=Math.max(0,400-(Date.now()-t0));
+    setTimeout(()=>{if(typ)typ.remove();addMsgPage(r.text,'bot',r.actions);},wait);
+  });
 }
 
 /* ── MOOD TRACKER ── */
