@@ -15,11 +15,6 @@
 <meta property="og:description" content="All Study Platforms In One Place — Premium ecosystem for every student">
 <meta property="og:image" content="https://files.catbox.moe/1phadr.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://files.catbox.moe" crossorigin>
-<link rel="preconnect" href="https://i.ibb.co" crossorigin>
-<link rel="preconnect" href="https://imgyx.pages.dev" crossorigin>
-<link rel="preconnect" href="https://iili.io" crossorigin>
-<link rel="preconnect" href="https://i.postimg.cc" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 [data-theme="dark"]{--bg0:#020408;--bg1:#060d1a;--bg2:#0a1220;--t1:#f0f8ff;--t2:#8ab4cc;--t3:#3a5a6a;--card:rgba(6,13,26,0.92);--border:rgba(0,200,255,0.12);--border2:rgba(0,200,255,0.28);--nb:rgba(2,4,8,0.9);--shadow:rgba(0,0,0,0.5)}
@@ -2498,26 +2493,6 @@ const PROV=[
     {n:'Next Topper',l:L.nt,t:'web',url:'https://edulearnx-official.vercel.app/'},
     {n:'Mission Jeet',l:L.mj,t:'web',url:'https://edulearnx-official.vercel.app'}]},
 ];
-/* logo helpers: retry once, then show an initials avatar instead of a generic logo */
-function logoErr(img){
-  try{
-    if(!img.dataset.r){
-      img.dataset.r='1';var o=img.getAttribute('src')||'';
-      setTimeout(function(){img.src=o+(o.indexOf('?')>-1?'&':'?')+'r='+Date.now();},1200);
-      return;
-    }
-    img.onerror=null;
-    var t=(img.alt||'?').replace(/[^A-Za-z0-9 ]/g,' ').trim().split(/\s+/).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()||'?';
-    var h=0,n=img.alt||'';for(var i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))%360;
-    img.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" rx="14" fill="hsl('+h+',60%,38%)"/><text x="32" y="41" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">'+t+'</text></svg>');
-  }catch(e){}
-}
-/* preload provider logos gently (6 at a time) so the host does not rate-limit us */
-(function(){try{var seen={},q=[];PROV.forEach(function(p){[p.logo].concat((p.plats||[]).map(function(x){return x.l})).forEach(function(u){if(u&&!seen[u]&&u.indexOf('data:')!==0){seen[u]=1;q.push(u);}});});
-var run=function(){var u=q.shift();if(!u)return;var i=new Image();i.onload=i.onerror=run;i.src=u;};
-window.addEventListener('load',function(){for(var k=0;k<6;k++)run();});}catch(e){}})();
-
-
 const QS=[
   "Padhai karo, duniya badlo. 🌏","Ek din aayega jab mehnat rang laayegi. 💪",
   "Hard work beats talent when talent doesn't work hard.",
@@ -2579,7 +2554,7 @@ function doSearch(){
   if(!hits.length){res.innerHTML='<div class="sr-none">No platforms found 😕</div>';return;}
   res.innerHTML=`<div style="padding:6px 4px 8px;font-size:.68rem;color:var(--t3)">${hits.length} result${hits.length>1?'s':''}</div>`+hits.slice(0,60).map(h=>`
     <${h.gate?`div onclick="openPortalGate('${h.gate}')"`:(h.url?`a href="${h.url}" target="_blank"`:'div')} class="sr-item">
-      <img src="${h.logo}" class="sr-logo" alt="${h.name}" onerror="logoErr(this)">
+      <img src="${h.logo}" class="sr-logo" alt="${h.name}" onerror="this.src='https://files.catbox.moe/1phadr.png'">
       <div class="sr-info"><div class="sr-name">${h.name}</div><div class="sr-prov">via ${h.prov}</div></div>
       ${h.url||h.gate?'<span style="color:var(--b);font-size:.8rem">→</span>':''}
     </${h.gate?'div':(h.url?'a':'div')}>`).join('');
@@ -2946,12 +2921,12 @@ function buildPlat(pl,apk){
   const badgeText=pl.t==='p'?'P':pl.t.toUpperCase();
   const btn=a?`<a href="${a}" class="btn-dl"><svg viewBox="0 0 24 24" width="9" height="9" fill="currentColor"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg>DOWNLOAD</a>`:(pl.gate?`<button class="btn-study" onclick="event.stopPropagation();openPortalGate('${pl.gate}')" type="button">LET'S STUDY</button>`:(pl.url?`<a href="${pl.url}" target="_blank" class="btn-study">LET'S STUDY</a>`:''));
   const cardClick=pl.gate?` onclick="openPortalGate('${pl.gate}')"`:(pl.url&&!a?` onclick="window.open('${pl.url}','_blank')"`:'');
-  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="plat-name">${pl.n}</div><span class="pbadge ${bc}">${badgeText}</span>${btn}</div>`;
+  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="plat-name">${pl.n}</div><span class="pbadge ${bc}">${badgeText}</span>${btn}</div>`;
 }
 function renderProv(p,container,showFav=true){
   const isFav=favs.includes(p.id);
   const block=document.createElement('div');block.className='prov-block rv';block.dataset.id=p.id;
-  block.innerHTML=`<div class="prov-head"><img src="${p.logo}" class="prov-logo" alt="${p.name}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="prov-info"><div class="prov-name">${p.name}</div><div class="prov-cnt">${p.plats.length} Platform${p.plats.length>1?'s':''}${p.apk?' • APK':''}</div></div>${p.best?'<span class="badge-star">★ BEST</span>':''}${showFav?`<button class="badge-fav${isFav?' act':''}" onclick="toggleFav('${p.id}',this)" type="button">⭐</button>`:''}</div>${p.note?`<div class="prov-note">${p.note}</div>`:''}<div class="plats-grid">${p.plats.map(pl=>buildPlat(pl,p.apk||null)).join('')}</div>`;
+  block.innerHTML=`<div class="prov-head"><img src="${p.logo}" class="prov-logo" alt="${p.name}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="prov-info"><div class="prov-name">${p.name}</div><div class="prov-cnt">${p.plats.length} Platform${p.plats.length>1?'s':''}${p.apk?' • APK':''}</div></div>${p.best?'<span class="badge-star">★ BEST</span>':''}${showFav?`<button class="badge-fav${isFav?' act':''}" onclick="toggleFav('${p.id}',this)" type="button">⭐</button>`:''}</div>${p.note?`<div class="prov-note">${p.note}</div>`:''}<div class="plats-grid">${p.plats.map(pl=>buildPlat(pl,p.apk||null)).join('')}</div>`;
   container.appendChild(block);
 }
 function renderAll(){const g=document.getElementById('prov-grid');if(!g)return;g.innerHTML='';PROV.forEach(p=>renderProv(p,g));observe();}
@@ -2973,7 +2948,7 @@ function renderAvailable(){
     p.plats.forEach(pl=>{
       const key=pl.n;
       if(seen.has(key))return;seen.add(key);
-      pills.push(`<span class="avail-pill"><img src="${pl.l}" alt="" loading="eager" decoding="async" onerror="logoErr(this)">${pl.n}</span>`);
+      pills.push(`<span class="avail-pill"><img src="${pl.l}" alt="" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'">${pl.n}</span>`);
     });
   });
   pg.innerHTML=pills.join('');
@@ -3062,14 +3037,14 @@ const STUDY_HUBS=[
 function buildHubPlat(pl){
   const btn=pl.gate?`<button class="btn-study" onclick="event.stopPropagation();openPortalGate('${pl.gate}')" type="button">LET'S STUDY</button>`:(pl.url?`<a href="${pl.url}" target="_blank" class="btn-study">LET'S STUDY</a>`:'');
   const cardClick=pl.gate?` onclick="openPortalGate('${pl.gate}')"`:(pl.url?` onclick="window.open('${pl.url}','_blank')"`:'');
-  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="plat-name">${pl.n}</div><span class="pbadge pbw">WEB</span>${btn}</div>`;
+  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="plat-name">${pl.n}</div><span class="pbadge pbw">WEB</span>${btn}</div>`;
 }
 function renderStudyHubs(){
   const g=document.getElementById('hub-grid');if(!g)return;g.innerHTML='';
   STUDY_HUBS.forEach(h=>{
     const block=document.createElement('div');block.className='prov-block rv'+(h.featured?' hub-featured':'');
     const gridStyle=h.singleCol?'style="grid-template-columns:1fr"':'';
-    block.innerHTML=`<div class="prov-head"><img src="${h.logo}" class="prov-logo" alt="${h.name}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="prov-info"><div class="prov-name">${h.name}</div><div class="prov-cnt">${h.plats.length} Platform${h.plats.length>1?'s':''}</div></div><span class="badge-star${h.featured?' badge-hot':''}">${h.featured?'🔥 ':'★ '}${h.badge}</span></div>${h.featured?'<div class="hub-feat-tag">📚 100,000+ Books — Don\'t miss this! Tap to explore the full library →</div>':''}${h.note?`<div class="prov-note">${h.note}</div>`:''}<div class="plats-grid" ${gridStyle}>${h.plats.map(pl=>buildHubPlat(pl)).join('')}</div>`;
+    block.innerHTML=`<div class="prov-head"><img src="${h.logo}" class="prov-logo" alt="${h.name}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="prov-info"><div class="prov-name">${h.name}</div><div class="prov-cnt">${h.plats.length} Platform${h.plats.length>1?'s':''}</div></div><span class="badge-star${h.featured?' badge-hot':''}">${h.featured?'🔥 ':'★ '}${h.badge}</span></div>${h.featured?'<div class="hub-feat-tag">📚 100,000+ Books — Don\'t miss this! Tap to explore the full library →</div>':''}${h.note?`<div class="prov-note">${h.note}</div>`:''}<div class="plats-grid" ${gridStyle}>${h.plats.map(pl=>buildHubPlat(pl)).join('')}</div>`;
     g.appendChild(block);
   });observe();
 }
@@ -4111,7 +4086,7 @@ function cmdSearch(q){
     provHits.slice(0,8).forEach(p=>{
       cmdItems.push(p);
       const tag=p.url?`href="${p.url}" target="_blank"`:'';
-      html+=`<${p.url?'a':'div'} class="cmd-item" ${tag} onclick="if(!this.href){event.preventDefault();} closeCmd()"><img src="${p.logo}" class="cmd-item-icon" alt="${p.name}" onerror="logoErr(this)"><div class="cmd-item-info"><div class="cmd-item-name">${p.name}</div><div class="cmd-item-sub">${p.sub}</div></div><span class="cmd-item-arr">→</span></${p.url?'a':'div'}>`;
+      html+=`<${p.url?'a':'div'} class="cmd-item" ${tag} onclick="if(!this.href){event.preventDefault();} closeCmd()"><img src="${p.logo}" class="cmd-item-icon" alt="${p.name}" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="cmd-item-info"><div class="cmd-item-name">${p.name}</div><div class="cmd-item-sub">${p.sub}</div></div><span class="cmd-item-arr">→</span></${p.url?'a':'div'}>`;
     });
   }
   if(!html)html='<div class="cmd-results-empty">No results for "'+q+'" — try a provider name or action</div>';
