@@ -15,6 +15,11 @@
 <meta property="og:description" content="All Study Platforms In One Place — Premium ecosystem for every student">
 <meta property="og:image" content="https://files.catbox.moe/1phadr.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://files.catbox.moe" crossorigin>
+<link rel="preconnect" href="https://i.ibb.co" crossorigin>
+<link rel="preconnect" href="https://imgyx.pages.dev" crossorigin>
+<link rel="preconnect" href="https://iili.io" crossorigin>
+<link rel="preconnect" href="https://i.postimg.cc" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 [data-theme="dark"]{--bg0:#020408;--bg1:#060d1a;--bg2:#0a1220;--t1:#f0f8ff;--t2:#8ab4cc;--t3:#3a5a6a;--card:rgba(6,13,26,0.92);--border:rgba(0,200,255,0.12);--border2:rgba(0,200,255,0.28);--nb:rgba(2,4,8,0.9);--shadow:rgba(0,0,0,0.5)}
@@ -1898,14 +1903,14 @@ const L={
 };
 const PROV=[
   {id:'codexstudys',name:'CodeXStudys',logo:'https://files.catbox.moe/psl8ym.jpg',best:true,plats:[
-    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://pwthor.live/study/batches'},
-    {n:'Physics Wallah 2',l:L.pw,t:'web',gate:'embed:studystark'},
-    {n:'Physics Wallah 3',l:L.pw,t:'web',url:'https://m.pwmarco.site/study/batches'},
+    {n:'Physics Wallah 1',l:L.pw,t:'web',url:'https://m.pwmarco.site/study/batches'},
+    {n:'Physics Wallah 2',l:L.pw,t:'web',url:'https://www.learnxpw.site/study/batches'},
+    {n:'Physics Wallah 3',l:L.pw,t:'web',url:'https://s2-cdn.pwnexus.eu.cc/study/batches'},
     {n:'Physics Wallah 4',l:L.pw,t:'web',url:'https://studyrays.cc/'},
-    {n:'Physics Wallah 5',l:L.pw,t:'web',url:'https://codexstudy.dpdns.org/pw/'},
-    {n:'Physics Wallah 6',l:L.pw,t:'web',url:'https://www.learnxpw.site/study/batches'},
-    {n:'Physics Wallah 7',l:L.pw,t:'web',gate:'embed:pwsphere'},
-    {n:'Physics Wallah 8',l:L.pw,t:'web',url:'https://s2-cdn.pwnexus.eu.cc/study/batches'},
+    {n:'Physics Wallah 5',l:L.pw,t:'web',gate:'embed:studystark'},
+    {n:'Physics Wallah 6',l:L.pw,t:'web',url:'https://pwthor.live/study/batches'},
+    {n:'Physics Wallah 7',l:L.pw,t:'web',url:'https://codexstudy.dpdns.org/pw/'},
+    {n:'Physics Wallah 8',l:L.pw,t:'web',gate:'embed:pwsphere'},
     {n:'PW Pi',l:L.pipro,t:'web',url:'https://pi-pro.space-z.ai/'},
     {n:'Pi 2',l:L.pipro,t:'web',url:'https://s2-cdn.pwnexus.eu.cc/study/pi'},
     {n:'Digital books',l:L.pw,t:'web',url:'https://books.streamfiles.eu.org/'},
@@ -1913,45 +1918,54 @@ const PROV=[
     {n:'Digital Book Test',l:L.pw,t:'web',url:'https://pwxbooks.pages.dev/'},
     {n:'Infinite Practice',l:L.pw,t:'web',url:'https://pwnexus.eu.cc/pw-infinity-practice'},
     {n:'Infinite Practice 2',l:L.pw,t:'web',url:'https://pwx.pages.dev/batch/infinite-practice'},
-    {n:'Allen',l:L.al,t:'bot',url:'https://t.me/prepneet1bot?start=start'},
-    {n:'Allen 2',l:L.al,t:'web',url:'https://others.streamfiles.eu.org/allen/'},
-    {n:'Unacademy',l:L.un,t:'web',url:'https://nexthope.pages.dev/unacademy/'},
+    {n:'Allen',l:L.al,t:'web',url:'https://codexstudy.dpdns.org/allen/'},
+    {n:'Allen 2',l:L.al,t:'bot',url:'https://t.me/prepneet1bot?start=start'},
+    {n:'Unacademy',l:L.un,t:'web',url:'https://codexstudy.dpdns.org/un/'},
+    {n:'Unacademy Offline',l:L.un,t:'web',url:'https://codexstudy.dpdns.org/unoffline/'},
     {n:'Unacademy 2',l:L.un,t:'web',gate:'embed:unacademy_hub'},
-    {n:'KGS 1',l:L.kgs,t:'web',url:'https://sahukgs.com/batches'},
-    {n:'KGS 2',l:L.kgs,t:'web',url:'https://codexstudy.dpdns.org/kgs/'},
-    {n:'Next Topper',l:L.nt,t:'web',url:'https://nt.codexstudy.dpdns.org'},
+    {n:'KGS 1',l:L.kgs,t:'web',url:'https://codexstudy.dpdns.org/kgs/'},
+    {n:'KGS 2',l:L.kgs,t:'web',url:'https://sahukgs.com/batches'},
+    {n:'Next Topper',l:L.nt,t:'web',url:'https://nt.codexstudy.dpdns.org/'},
     {n:'Mission Jeet',l:L.mj,t:'web',url:'https://www.learnxpw.site/study/missionjeet'},
     {n:'Vibrant Academy',l:L.va,t:'web',url:'https://studybeepro.site/vibrante/'},
-    {n:'Selection Way',l:L.sw,t:'web',url:'https://selection-way-lake.vercel.app/'},
-    {n:'Rojgar With Ankit',l:L.rwa,t:'web',url:'https://learnbyakp.site/rwa/batch'},
-    {n:'Career Will',l:L.cw,t:'web',url:'https://runtkyp.xo.je/?i=1'},
-    {n:'Career Will 2',l:L.cw,t:'web',url:'https://cw.studybison.in/'},
+    {n:'Selection Way',l:L.sw,t:'web',url:'https://codexstudy.dpdns.org/sw/'},
+    {n:'Rojgar With Ankit',l:L.rwa,t:'web',url:'https://codexstudy.dpdns.org/rwa/'},
+    {n:'Career Will',l:L.cw,t:'web',url:'https://codexstudy.dpdns.org/cw/'},
+    {n:'Career Will 2',l:L.cw,t:'web',url:'https://runtkyp.xo.je/?i=1'},
     {n:'Apna College',l:L.ac,t:'web',url:'https://ac.codexstudy.dpdns.org'},
     {n:'Target Board',l:L.tb,t:'web',url:'https://asmultiverse.app/?tab=home&app=694690cbe1df5128eacc5caa'},
-    {n:'Disha Online Classes',l:'https://files.catbox.moe/bl6n75.png',t:'web',url:'https://ais-pre-gl6pz5zl474l7n2yngs5xz-737969307990.asia-southeast1.run.app/'},
-    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://pwnexus.eu.cc/vidyagram'},
-    {n:'Vidyagram 2',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://learnbyakp.site/vidyagram'},
+    {n:'Disha Online Classes',l:'https://files.catbox.moe/bl6n75.png',t:'web',url:'https://codexstudy.dpdns.org/doc/'},
+    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://codexstudy.dpdns.org/vg/'},
+    {n:'Vidyagram 2',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://pwnexus.eu.cc/vidyagram'},
     {n:'Yes Officer',l:'https://iili.io/Cm8DWen.jpg',t:'web',url:'https://yesofficer.nexthope.cc.cd/'},
-    {n:'RG Vikramjeet',l:L.rgv,t:'web',url:'https://learnbyakp.site/vikaram'},
+    {n:'RG Vikramjeet',l:L.rgv,t:'web',url:'https://codexstudy.dpdns.org/rg/'},
     {n:'Vidyakul',l:L.vk,t:'web',url:'https://vidyakool.streamfiles.eu.org/'},
     {n:'Utkarsh',l:'https://i.postimg.cc/wv3XtmG8/20260217-013950.jpg',t:'web',url:'https://asmultiverse.app/?tab=home&app=5eb393ee95fab7468a823dhAB2'},
     {n:'Just Padhle',l:'https://i.ibb.co/fdZ4rc6F/10266.jpg',t:'web',url:'https://deltastudy.fun/verify?next=%2Fpadhle'},
-    {n:'Sarvam Crash Course',l:L.srv,t:'web',gate:'embed:sarvam_institute'},
-    {n:'Sarvam Career Institute',l:L.srv,t:'web',gate:'embed:sarvam_crash'},
-    {n:'Study IQ',l:L.siq,t:'web',url:'https://pwnexus.eu.cc/study-iq'},
-    {n:'CDS Journey',l:L.cds,t:'web',url:'https://spidyuniversecds.vercel.app/'},
+    {n:'Sarvam Career Institute',l:L.srv,t:'web',url:'https://codexstudy.dpdns.org/sarvam/'},
+    {n:'Study IQ',l:L.siq,t:'web',url:'https://codexstudy.dpdns.org/iq/'},
+    {n:'CDS Journey',l:L.cds,t:'web',url:'https://codexstudy.dpdns.org/cds/'},
     {n:'Sachin Academy',l:'https://i.ibb.co/n8PJXJ5X/Screenshot-2026-08-28-16-25-52-876-com-android-chrome.png',t:'web',url:'https://sachin.nexthope.cc.cd/'},
-    {n:'Sachin Classes 2',l:'https://i.ibb.co/n8PJXJ5X/Screenshot-2026-08-28-16-25-52-876-com-android-chrome.png',t:'web',url:'https://sachin.nexthope.site'},
     {n:'Toppers Wisdom',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://pwnexus.eu.cc/topper-wisdom'},
-    {n:'GS Vision',l:'https://files.catbox.moe/mzecv5.png',t:'web',url:'https://nexthope.pages.dev/gsvision/'},
-    {n:'Future Kul',l:'https://files.catbox.moe/ck8uz5.png',t:'web',url:'https://nexthope.pages.dev/futurekul/'},
-    {n:'MD Classes',l:'https://iili.io/CehU8tn.png',t:'web',url:'https://mdclassesx.vercel.app/'},
-    {n:'Eduteria',l:'https://files.catbox.moe/e082of.png',t:'web',url:'https://studyapkmod-eduteria.vercel.app/'},
+    {n:'GS Vision',l:'https://files.catbox.moe/mzecv5.png',t:'web',url:'https://codexstudy.dpdns.org/gs/'},
+    {n:'Future Kul',l:'https://files.catbox.moe/ck8uz5.png',t:'web',url:'https://codexstudy.dpdns.org/fk/'},
+    {n:'MD Classes',l:'https://iili.io/CehU8tn.png',t:'web',url:'https://codexstudy.dpdns.org/md/'},
+    {n:'Eduteria',l:'https://files.catbox.moe/e082of.png',t:'web',url:'https://codexstudy.dpdns.org/teria/'},
     {n:'Munil Sir',l:L.munil,t:'web',url:'https://deltastudy.fun/munilsir'},
-    {n:'Master Sahab',l:L.msahab,t:'web',url:'https://mastersahab.studybeepro.site/'},
-    {n:'Padhle Akshay',l:L.pa,t:'web',url:'https://trms-akshay.nextmate.site/home'},
+    {n:'Master Sahab',l:L.msahab,t:'web',url:'https://codexstudy.dpdns.org/master/'},
+    {n:'Padhle Akshay',l:L.pa,t:'web',url:'https://codexstudy.dpdns.org/padhle/'},
     {n:'Magnet Brain',l:L.mb,t:'web',url:'https://www.magnetbrains.com/'},
-    {n:'Pinnacle Book',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://nexthope.pages.dev/pinnacle/'},
+    {n:'Science Magnet',l:'https://files.catbox.moe/4innl5.png',t:'web',url:'https://codexstudy.dpdns.org/sm/'},
+    {n:'Maths Mania',l:'https://files.catbox.moe/jxyaog.png',t:'web',url:'https://codexstudy.dpdns.org/mm/'},
+    {n:'Verbal Maths',l:'https://files.catbox.moe/atmwk8.png',t:'web',url:'https://codexstudy.dpdns.org/vm/'},
+    {n:'KD Live',l:L.kd,t:'web',url:'https://codexstudy.dpdns.org/kd/'},
+    {n:'UC Live',l:'https://files.catbox.moe/8xx6mr.png',t:'web',url:'https://codexstudy.dpdns.org/uc/'},
+    {n:'Pramar Academy',l:'https://files.catbox.moe/egjf6z.png',t:'web',url:'https://codexstudy.dpdns.org/pr/'},
+    {n:'Arora Educator',l:'https://files.catbox.moe/hugjxp.png',t:'web',url:'https://codexstudy.dpdns.org/ae/'},
+    {n:'Aash Classes',l:L.ashs,t:'web',url:'https://codexstudy.dpdns.org/aash/'},
+    {n:'CBSE 10th',l:'https://files.catbox.moe/7gbngj.png',t:'web',url:'https://codexstudy.dpdns.org/cbse/'},
+    {n:'Periodic Table',l:'https://files.catbox.moe/the00m.png',t:'web',url:'https://codexstudy.dpdns.org/table/'},
+    {n:'Pinnacle Book',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://codexstudy.dpdns.org/pinnacle/'},
     {n:'Ebooks Official',l:'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%230a0a0f%22%2F%3E%3Cg%20transform%3D%22translate%2816%2C16%29%22%3E%3Cpath%20d%3D%22M12%206.253v13m0-13C10.832%205.477%209.246%205%207.5%205S4.168%205.477%203%206.253v13C4.168%2018.477%205.754%2018%207.5%2018s3.332.477%204.5%201.253m0-13C13.168%205.477%2014.754%205%2016.5%205c1.747%200%203.332.477%204.5%201.253v13C19.832%2018.477%2018.247%2018%2016.5%2018c-1.746%200-3.332.477-4.5%201.253%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E',t:'web',gate:'embed:ebooks'},
     {n:'Dhruv Rathee',l:'https://imgyx.pages.dev/QdBbc',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
     {n:'Coding Courses',l:'https://imgyx.pages.dev/N6nDF',t:'web',url:'https://app.akkistudyx.in/app?view=subjects'},
@@ -1986,7 +2000,50 @@ const PROV=[
     {n:'Sketch Book By Abhishek',l:'https://i.postimg.cc/pybKhcQf/Sketchbook-By-Abhishek.png',t:'web',url:'https://asmultiverse.app/?tab=home&app=6a3d1c9cd754c8894bf5812a'}]},
   {id:'codexstudy2',name:'CodexStudy 2.0',logo:'https://files.catbox.moe/psl8ym.jpg',plats:[
     {n:'Physics Wallah',l:L.pw,t:'web',url:'https://codexstudy.dpdns.org/pw/'},
-    {n:'Selection Way',l:L.sw,t:'web',url:'https://codexstudy.dpdns.org/sw/'}]},
+    {n:'PW Digital Books',l:L.pw,t:'web',url:'https://books.streamfiles.eu.org/'},
+    {n:'PI',l:L.pipro,t:'web',url:'https://codexstudy.dpdns.org/pi/'},
+    {n:'Allen',l:L.al,t:'web',url:'https://codexstudy.dpdns.org/allen/'},
+    {n:'Next Toppers',l:L.nt,t:'web',url:'https://nt.codexstudy.dpdns.org/'},
+    {n:'Mission Jeet',l:L.mj,t:'web',url:'https://codexstudy.dpdns.org/mj/'},
+    {n:'Khan Global Studies',l:L.kgs,t:'web',url:'https://codexstudy.dpdns.org/kgs/'},
+    {n:'Unacademy',l:L.un,t:'web',url:'https://codexstudy.dpdns.org/un/'},
+    {n:'Unacademy Offline',l:L.un,t:'web',url:'https://codexstudy.dpdns.org/unoffline/'},
+    {n:'Apna College',l:L.ac,t:'web',url:'https://ac.codexstudy.dpdns.org/'},
+    {n:'Rojgar With Ankit',l:L.rwa,t:'web',url:'https://codexstudy.dpdns.org/rwa/'},
+    {n:'GS Vision',l:'https://files.catbox.moe/mzecv5.png',t:'web',url:'https://codexstudy.dpdns.org/gs/'},
+    {n:'Science and Fun',l:L.sf,t:'web',url:'https://codexstudy.dpdns.org/sf/'},
+    {n:'Vidyakul',l:L.vk,t:'web',url:'https://codexstudy.dpdns.org/vidyakul/'},
+    {n:'Padhle Akshay',l:L.pa,t:'web',url:'https://codexstudy.dpdns.org/padhle/'},
+    {n:'Study IQ',l:L.siq,t:'web',url:'https://codexstudy.dpdns.org/iq/'},
+    {n:'CareerWill',l:L.cw,t:'web',url:'https://codexstudy.dpdns.org/cw/'},
+    {n:'FutureKul',l:'https://files.catbox.moe/ck8uz5.png',t:'web',url:'https://codexstudy.dpdns.org/fk/'},
+    {n:'Eduteria',l:'https://files.catbox.moe/e082of.png',t:'web',url:'https://codexstudy.dpdns.org/teria/'},
+    {n:'Vibrant Academy',l:L.va,t:'web',url:'https://codexstudy.dpdns.org/vb/'},
+    {n:'Pinnacle Books',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://codexstudy.dpdns.org/pinnacle/'},
+    {n:'RG Vikramjeet',l:L.rgv,t:'web',url:'https://codexstudy.dpdns.org/rg/'},
+    {n:'Gyan Bindu',l:L.gb,t:'web',url:'https://codexstudy.dpdns.org/gb/'},
+    {n:'MD Classes',l:'https://iili.io/CehU8tn.png',t:'web',url:'https://codexstudy.dpdns.org/md/'},
+    {n:'Target Board',l:L.tb,t:'web',url:'https://codexstudy.dpdns.org/tb/'},
+    {n:'Officer Academy',l:'https://files.catbox.moe/uhswsg.png',t:'web',url:'https://codexstudy.dpdns.org/officer/'},
+    {n:'Yes Officer',l:'https://iili.io/Cm8DWen.jpg',t:'web',url:'https://codexstudy.dpdns.org/yes/'},
+    {n:'CDS Journey',l:L.cds,t:'web',url:'https://codexstudy.dpdns.org/cds/'},
+    {n:'Selection Way',l:L.sw,t:'web',url:'https://codexstudy.dpdns.org/sw/'},
+    {n:'Sachin Academy',l:L.sachin,t:'web',url:'https://codexstudy.dpdns.org/sachin/'},
+    {n:'Master Sahab',l:L.msahab,t:'web',url:'https://codexstudy.dpdns.org/master/'},
+    {n:'Aash Classes',l:L.ashs,t:'web',url:'https://codexstudy.dpdns.org/aash/'},
+    {n:'Sarvam Career Institute',l:L.srv,t:'web',url:'https://codexstudy.dpdns.org/sarvam/'},
+    {n:'Vidyagram',l:'https://files.catbox.moe/84uzok.jpeg',t:'web',url:'https://codexstudy.dpdns.org/vg/'},
+    {n:'Science Magnet',l:'https://files.catbox.moe/4innl5.png',t:'web',url:'https://codexstudy.dpdns.org/sm/'},
+    {n:'Maths Mania',l:'https://files.catbox.moe/jxyaog.png',t:'web',url:'https://codexstudy.dpdns.org/mm/'},
+    {n:'Verbal Maths',l:'https://files.catbox.moe/atmwk8.png',t:'web',url:'https://codexstudy.dpdns.org/vm/'},
+    {n:'KD Live',l:L.kd,t:'web',url:'https://codexstudy.dpdns.org/kd/'},
+    {n:'UC Live',l:'https://files.catbox.moe/8xx6mr.png',t:'web',url:'https://codexstudy.dpdns.org/uc/'},
+    {n:'Pramar Academy',l:'https://files.catbox.moe/egjf6z.png',t:'web',url:'https://codexstudy.dpdns.org/pr/'},
+    {n:'Arora Educator',l:'https://files.catbox.moe/hugjxp.png',t:'web',url:'https://codexstudy.dpdns.org/ae/'},
+    {n:'Disha Online Classes',l:'https://files.catbox.moe/bl6n75.png',t:'web',url:'https://codexstudy.dpdns.org/doc/'},
+    {n:'Topper Wisdom',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://codexstudy.dpdns.org/tw/'},
+    {n:'CBSE 10th',l:'https://files.catbox.moe/7gbngj.png',t:'web',url:'https://codexstudy.dpdns.org/cbse/'},
+    {n:'Periodic Table',l:'https://files.catbox.moe/the00m.png',t:'web',url:'https://codexstudy.dpdns.org/table/'}]},
   {id:'studyrays',name:'StudyRays',logo:'https://files.catbox.moe/2i70nr.png',best:true,plats:[
     {n:'Physics Wallah',l:L.pw,t:'web',url:'http://StudyRays.cc'},
     {n:'Study IQ',l:L.siq,t:'web',url:'https://studyiq.streamfiles.eu.org/'},
@@ -2019,6 +2076,7 @@ const PROV=[
     {n:'Physics Wallah',l:L.pw,t:'web',url:'https://pw-rex.fast-page.org'},
     {n:'Next Topper',l:L.nt,t:'web',url:'https://NT-ReX.Lovable.App'}]},
   {id:'nexthope',name:'NextHope',logo:'https://i.ibb.co/v4k8LdYN/nexthope.png',plats:[
+    {n:'Physics Wallah',l:L.pw,t:'web',url:'https://pw-api-8684410e2a6c.herokuapp.com/'},
     {n:'Next Topper',l:L.nt,t:'web',url:'https://nt.nexthope.cc.cd/'},
     {n:'Mission Jeet',l:L.mj,t:'web',url:'https://nexthope.cc.cd/mj/'},
     {n:'Unacademy',l:L.un,t:'web',url:'https://nexthope.cc.cd/unacademy/'},
@@ -2055,6 +2113,7 @@ const PROV=[
     {n:'Master Sahab',l:L.msahab,t:'web',url:'https://pwnexus.eu.cc/master-sahab'},
     {n:'Khan Global',l:L.kgs,t:'web',url:'https://pwnexus.eu.cc/khan-global'},
     {n:'Apna College',l:L.ac,t:'web',url:'https://pwnexus.eu.cc/apna-college'},
+    {n:'Pramar Academy',l:'https://files.catbox.moe/egjf6z.png',t:'web',url:'https://pwnexus.eu.cc/pramar-academy'},
     {n:'Pinnacle Book',l:'https://www.topperswisdom.com/next_images/logo.png',t:'web',url:'https://pwnexus.eu.cc/pinnacle-book'},
     {n:'Career Will',l:L.cw,t:'web',url:'https://pwnexus.eu.cc/career-will'},
     {n:'Study IQ',l:L.siq,t:'web',url:'https://pwnexus.eu.cc/study-iq'}]},
@@ -2076,6 +2135,7 @@ const PROV=[
     {n:'Master Sahab',l:L.msahab,t:'web',url:'https://deltastudy.fun/mastersahab'},
     {n:'Book Verse',l:'https://i.ibb.co/93tHtz57/IMG-20260613-023243-349.jpg',t:'web',url:'https://books.deltastudy.in/'}]},
   {id:'spidey',name:'Spidey Universe',logo:'https://files.catbox.moe/nzrsys.jpg',plats:[
+    {n:'Test Ranking',l:'https://files.catbox.moe/m1296g.jpg',t:'web',url:'https://test.spidyuniverse.in'},
     {n:'Rojgar With Ankit',l:L.rwa,t:'web',url:'https://spidyrwa.vercel.app/'},
     {n:'CDS Journey',l:L.cds,t:'web',url:'https://spidyuniversecds.vercel.app/'},
     {n:'Khan Global Studies',l:L.kgs,t:'web',url:'https://spidy-kgs.vercel.app/'},
@@ -2438,6 +2498,25 @@ const PROV=[
     {n:'Next Topper',l:L.nt,t:'web',url:'https://edulearnx-official.vercel.app/'},
     {n:'Mission Jeet',l:L.mj,t:'web',url:'https://edulearnx-official.vercel.app'}]},
 ];
+/* logo helpers: retry once, then show an initials avatar instead of a generic logo */
+function logoErr(img){
+  try{
+    if(!img.dataset.r){
+      img.dataset.r='1';var o=img.getAttribute('src')||'';
+      setTimeout(function(){img.src=o+(o.indexOf('?')>-1?'&':'?')+'r='+Date.now();},1200);
+      return;
+    }
+    img.onerror=null;
+    var t=(img.alt||'?').replace(/[^A-Za-z0-9 ]/g,' ').trim().split(/\s+/).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()||'?';
+    var h=0,n=img.alt||'';for(var i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))%360;
+    img.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" rx="14" fill="hsl('+h+',60%,38%)"/><text x="32" y="41" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">'+t+'</text></svg>');
+  }catch(e){}
+}
+/* preload provider logos gently (6 at a time) so the host does not rate-limit us */
+(function(){try{var seen={},q=[];PROV.forEach(function(p){[p.logo].concat((p.plats||[]).map(function(x){return x.l})).forEach(function(u){if(u&&!seen[u]&&u.indexOf('data:')!==0){seen[u]=1;q.push(u);}});});
+var run=function(){var u=q.shift();if(!u)return;var i=new Image();i.onload=i.onerror=run;i.src=u;};
+window.addEventListener('load',function(){for(var k=0;k<6;k++)run();});}catch(e){}})();
+
 
 const QS=[
   "Padhai karo, duniya badlo. 🌏","Ek din aayega jab mehnat rang laayegi. 💪",
@@ -2500,7 +2579,7 @@ function doSearch(){
   if(!hits.length){res.innerHTML='<div class="sr-none">No platforms found 😕</div>';return;}
   res.innerHTML=`<div style="padding:6px 4px 8px;font-size:.68rem;color:var(--t3)">${hits.length} result${hits.length>1?'s':''}</div>`+hits.slice(0,60).map(h=>`
     <${h.gate?`div onclick="openPortalGate('${h.gate}')"`:(h.url?`a href="${h.url}" target="_blank"`:'div')} class="sr-item">
-      <img src="${h.logo}" class="sr-logo" alt="${h.name}" onerror="this.src='https://files.catbox.moe/1phadr.png'">
+      <img src="${h.logo}" class="sr-logo" alt="${h.name}" onerror="logoErr(this)">
       <div class="sr-info"><div class="sr-name">${h.name}</div><div class="sr-prov">via ${h.prov}</div></div>
       ${h.url||h.gate?'<span style="color:var(--b);font-size:.8rem">→</span>':''}
     </${h.gate?'div':(h.url?'a':'div')}>`).join('');
@@ -2867,12 +2946,12 @@ function buildPlat(pl,apk){
   const badgeText=pl.t==='p'?'P':pl.t.toUpperCase();
   const btn=a?`<a href="${a}" class="btn-dl"><svg viewBox="0 0 24 24" width="9" height="9" fill="currentColor"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg>DOWNLOAD</a>`:(pl.gate?`<button class="btn-study" onclick="event.stopPropagation();openPortalGate('${pl.gate}')" type="button">LET'S STUDY</button>`:(pl.url?`<a href="${pl.url}" target="_blank" class="btn-study">LET'S STUDY</a>`:''));
   const cardClick=pl.gate?` onclick="openPortalGate('${pl.gate}')"`:(pl.url&&!a?` onclick="window.open('${pl.url}','_blank')"`:'');
-  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="plat-name">${pl.n}</div><span class="pbadge ${bc}">${badgeText}</span>${btn}</div>`;
+  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="plat-name">${pl.n}</div><span class="pbadge ${bc}">${badgeText}</span>${btn}</div>`;
 }
 function renderProv(p,container,showFav=true){
   const isFav=favs.includes(p.id);
   const block=document.createElement('div');block.className='prov-block rv';block.dataset.id=p.id;
-  block.innerHTML=`<div class="prov-head"><img src="${p.logo}" class="prov-logo" alt="${p.name}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="prov-info"><div class="prov-name">${p.name}</div><div class="prov-cnt">${p.plats.length} Platform${p.plats.length>1?'s':''}${p.apk?' • APK':''}</div></div>${p.best?'<span class="badge-star">★ BEST</span>':''}${showFav?`<button class="badge-fav${isFav?' act':''}" onclick="toggleFav('${p.id}',this)" type="button">⭐</button>`:''}</div>${p.note?`<div class="prov-note">${p.note}</div>`:''}<div class="plats-grid">${p.plats.map(pl=>buildPlat(pl,p.apk||null)).join('')}</div>`;
+  block.innerHTML=`<div class="prov-head"><img src="${p.logo}" class="prov-logo" alt="${p.name}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="prov-info"><div class="prov-name">${p.name}</div><div class="prov-cnt">${p.plats.length} Platform${p.plats.length>1?'s':''}${p.apk?' • APK':''}</div></div>${p.best?'<span class="badge-star">★ BEST</span>':''}${showFav?`<button class="badge-fav${isFav?' act':''}" onclick="toggleFav('${p.id}',this)" type="button">⭐</button>`:''}</div>${p.note?`<div class="prov-note">${p.note}</div>`:''}<div class="plats-grid">${p.plats.map(pl=>buildPlat(pl,p.apk||null)).join('')}</div>`;
   container.appendChild(block);
 }
 function renderAll(){const g=document.getElementById('prov-grid');if(!g)return;g.innerHTML='';PROV.forEach(p=>renderProv(p,g));observe();}
@@ -2894,7 +2973,7 @@ function renderAvailable(){
     p.plats.forEach(pl=>{
       const key=pl.n;
       if(seen.has(key))return;seen.add(key);
-      pills.push(`<span class="avail-pill"><img src="${pl.l}" alt="" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'">${pl.n}</span>`);
+      pills.push(`<span class="avail-pill"><img src="${pl.l}" alt="" loading="eager" decoding="async" onerror="logoErr(this)">${pl.n}</span>`);
     });
   });
   pg.innerHTML=pills.join('');
@@ -2917,6 +2996,9 @@ const STUDY_HUBS=[
     {n:'Rank Yoddha',l:'https://files.catbox.moe/fiud51.jpg',t:'web',url:'https://web.rankyodha.com/'},
     {n:'Jee Test',l:'https://files.catbox.moe/psl8ym.jpg',t:'web',url:'https://PrepJeeTest.vercel.app'},
     {n:'Jee & Neet Test',l:'https://files.catbox.moe/psl8ym.jpg',t:'web',url:'https://spark-kmx-test.onrender.com/?q='}]},
+  /* ── TEST RANKING ── */
+  {id:'testranking',name:'Test Ranking',logo:'https://files.catbox.moe/m1296g.jpg',badge:'TESTS',plats:[
+    {n:'Test Ranking',l:'https://files.catbox.moe/m1296g.jpg',t:'web',url:'https://test.spidyuniverse.in'}]},
   /* ── BOOK HUB (FEATURED) ── */
   {id:'bookish',name:'Bookish',logo:L.bk,badge:'BOOKS · 100K+',featured:true,plats:[
     {n:'Bookish',l:L.bk,t:'web',url:'https://bookish.nextmate.site/'}]},
@@ -2939,7 +3021,8 @@ const STUDY_HUBS=[
     {n:'MHTCET',l:L.mhtcet,t:'web',url:'http://alphax.edunexusprep.in'},
     {n:'MHTCET',l:L.mhtcet,t:'web',url:'https://tuteflow.tech/mht_cet_checker'}]},
   {id:'periodictable',name:'Periodic Table',logo:L.pt,badge:'STUDY HUB',plats:[
-    {n:'Periodic Table',l:L.pt,t:'web',url:'http://teamkohinoorperiodic-table.vercel.app'}]},
+    {n:'Periodic Table',l:L.pt,t:'web',url:'http://teamkohinoorperiodic-table.vercel.app'},
+    {n:'Periodic Table 2',l:'https://files.catbox.moe/the00m.png',t:'web',url:'https://codexstudy.dpdns.org/table/'}]},
   /* ── GENETRY ── */
   {id:'genetry',name:'Genetry',logo:'https://files.catbox.moe/ta74q9.jpg',badge:'NOTES',plats:[
     {n:'Old Batches',l:'https://files.catbox.moe/4fm1zw.png',t:'web',url:'https://genetry.carrd.co'},
@@ -2979,14 +3062,14 @@ const STUDY_HUBS=[
 function buildHubPlat(pl){
   const btn=pl.gate?`<button class="btn-study" onclick="event.stopPropagation();openPortalGate('${pl.gate}')" type="button">LET'S STUDY</button>`:(pl.url?`<a href="${pl.url}" target="_blank" class="btn-study">LET'S STUDY</a>`:'');
   const cardClick=pl.gate?` onclick="openPortalGate('${pl.gate}')"`:(pl.url?` onclick="window.open('${pl.url}','_blank')"`:'');
-  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="plat-name">${pl.n}</div><span class="pbadge pbw">WEB</span>${btn}</div>`;
+  return `<div class="plat-card"${cardClick}><img src="${pl.l}" class="plat-logo" alt="${pl.n}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="plat-name">${pl.n}</div><span class="pbadge pbw">WEB</span>${btn}</div>`;
 }
 function renderStudyHubs(){
   const g=document.getElementById('hub-grid');if(!g)return;g.innerHTML='';
   STUDY_HUBS.forEach(h=>{
     const block=document.createElement('div');block.className='prov-block rv'+(h.featured?' hub-featured':'');
     const gridStyle=h.singleCol?'style="grid-template-columns:1fr"':'';
-    block.innerHTML=`<div class="prov-head"><img src="${h.logo}" class="prov-logo" alt="${h.name}" loading="lazy" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="prov-info"><div class="prov-name">${h.name}</div><div class="prov-cnt">${h.plats.length} Platform${h.plats.length>1?'s':''}</div></div><span class="badge-star${h.featured?' badge-hot':''}">${h.featured?'🔥 ':'★ '}${h.badge}</span></div>${h.featured?'<div class="hub-feat-tag">📚 100,000+ Books — Don\'t miss this! Tap to explore the full library →</div>':''}${h.note?`<div class="prov-note">${h.note}</div>`:''}<div class="plats-grid" ${gridStyle}>${h.plats.map(pl=>buildHubPlat(pl)).join('')}</div>`;
+    block.innerHTML=`<div class="prov-head"><img src="${h.logo}" class="prov-logo" alt="${h.name}" loading="eager" decoding="async" onerror="logoErr(this)"><div class="prov-info"><div class="prov-name">${h.name}</div><div class="prov-cnt">${h.plats.length} Platform${h.plats.length>1?'s':''}</div></div><span class="badge-star${h.featured?' badge-hot':''}">${h.featured?'🔥 ':'★ '}${h.badge}</span></div>${h.featured?'<div class="hub-feat-tag">📚 100,000+ Books — Don\'t miss this! Tap to explore the full library →</div>':''}${h.note?`<div class="prov-note">${h.note}</div>`:''}<div class="plats-grid" ${gridStyle}>${h.plats.map(pl=>buildHubPlat(pl)).join('')}</div>`;
     g.appendChild(block);
   });observe();
 }
@@ -4028,7 +4111,7 @@ function cmdSearch(q){
     provHits.slice(0,8).forEach(p=>{
       cmdItems.push(p);
       const tag=p.url?`href="${p.url}" target="_blank"`:'';
-      html+=`<${p.url?'a':'div'} class="cmd-item" ${tag} onclick="if(!this.href){event.preventDefault();} closeCmd()"><img src="${p.logo}" class="cmd-item-icon" alt="${p.name}" onerror="this.src='https://files.catbox.moe/1phadr.png'"><div class="cmd-item-info"><div class="cmd-item-name">${p.name}</div><div class="cmd-item-sub">${p.sub}</div></div><span class="cmd-item-arr">→</span></${p.url?'a':'div'}>`;
+      html+=`<${p.url?'a':'div'} class="cmd-item" ${tag} onclick="if(!this.href){event.preventDefault();} closeCmd()"><img src="${p.logo}" class="cmd-item-icon" alt="${p.name}" onerror="logoErr(this)"><div class="cmd-item-info"><div class="cmd-item-name">${p.name}</div><div class="cmd-item-sub">${p.sub}</div></div><span class="cmd-item-arr">→</span></${p.url?'a':'div'}>`;
     });
   }
   if(!html)html='<div class="cmd-results-empty">No results for "'+q+'" — try a provider name or action</div>';
