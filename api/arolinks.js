@@ -8,8 +8,15 @@ module.exports = async (req, res) => {
   const out = (c, o) => res.status(c).end(JSON.stringify(o));
   try {
     const host = req.headers["x-forwarded-host"] || req.headers.host;
-    const t = new URL(new URL(req.url, "https://" + host).searchParams.get("url") || "");
+    const q = new URL(req.url, "https://" + host).searchParams;
+    if (q.has("owner")) return out(200, { owner: !!(process.env.OWNER_KEY && q.get("owner") === process.env.OWNER_KEY) });
+    const t = new URL(q.get("url") || "");
     if (t.host !== host) return out(400, { error: "bad url" });
+    if (process.env.TURNSTILE_SECRET) {
+      const cf = new URL(req.url, "https://" + host).searchParams.get("cf") || "";
+      const v = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: new URLSearchParams({ secret: process.env.TURNSTILE_SECRET, response: cf }) }).then((x) => x.json()).catch(() => ({}));
+      if (!v.success) return out(403, { error: "captcha" });
+    }
     const token = process.env.SHORTENER_TOKEN || process.env.AROLINKS_TOKEN;
     if (!token) return out(500, { error: "token missing" });
     const api = process.env.SHORTENER_API || "https://vplink.in/api";
