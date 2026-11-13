@@ -3,6 +3,8 @@
   "use strict";
   var APP = "hub";
   var OK = "aro_ok_" + APP, NONCE = "aro_n_" + APP, HOURS = 24, MIN_MS = 8000;
+  // Cloudflare Turnstile "security verification" card: paste your Site Key between the quotes ("" = switched off)
+  var TS_KEY = "", TS_NAME = "CODEX STUDYS";
   // "Watch tutorial" video: change the link, start time (seconds) or the crop (fraction of the video height hidden at top/bottom) here
   var TUTORIAL = {
     src: "https://res.cloudinary.com/s6oiiwr6/video/upload/v1794073685/VID_20261107_222411_866.mp4",
@@ -28,19 +30,63 @@
     }
   } catch (e) {}
 
+  // owner pass: open any page once with ?owner=<your OWNER_KEY>; this browser then skips the key gate for a year
+  try {
+    var ou = new URL(location.href), ov = ou.searchParams.get("owner");
+    if (ov) {
+      ou.searchParams.delete("owner");
+      history.replaceState(history.state, "", ou.pathname + ou.search + ou.hash);
+      fetch("/api/arolinks?owner=" + encodeURIComponent(ov), { cache: "no-store" }).then(function (r) { return r.json(); })
+        .then(function (j) { if (j && j.owner) { sc("aro_owner", "1", 365 * 86400); location.reload(); } }).catch(function () {});
+    }
+  } catch (e) {}
+
+  var tsToken = "";
+  // full-screen "Security Verification" card with the Cloudflare Turnstile check; calls done() once it is passed
+  function showVerify(done) {
+    if (!TS_KEY) { if (done) done(); return; }
+    if (document.getElementById("aro-ver")) return;
+    var w = document.createElement("div");
+    w.id = "aro-ver";
+    w.innerHTML =
+      '<style>#aro-ver{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;padding:18px;background:#05060a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}' +
+      '#aro-ver .c{width:min(100%,420px);padding:34px 26px 28px;text-align:center;border:1px solid #23262e;border-radius:28px;background:#111318;box-shadow:0 24px 60px rgba(0,0,0,.6)}' +
+      '#aro-ver .s{width:70px;height:70px;margin:0 auto 22px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#0c2a30;border:1px solid #12414a}' +
+      '#aro-ver h2{margin:0 0 12px;color:#fff;font-size:22px;line-height:1.25;font-weight:800;letter-spacing:.02em;text-transform:uppercase}' +
+      '#aro-ver p{margin:0 0 22px;color:#8b909c;font-size:15px;line-height:1.5}' +
+      '#aro-ver .t{min-height:65px;display:flex;justify-content:center}' +
+      '#aro-ver .pw{margin-top:22px;color:#4a4f5a;font-size:12px;letter-spacing:.18em;font-weight:700;text-transform:uppercase}</style>' +
+      '<div class="c"><div class="s"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2.5 4.5 5.5v6c0 4.6 3.1 8.3 7.5 10 4.4-1.7 7.5-5.4 7.5-10v-6L12 2.5Z" fill="#9fb7c9"/><path d="M12 2.5v19c4.4-1.7 7.5-5.4 7.5-10v-6L12 2.5Z" fill="#6f8aa0"/></svg></div>' +
+      "<h2>" + TS_NAME + " Security Verification</h2><p>Please complete the security verification to continue.</p>" +
+      '<div class="t" id="aro-ts"></div><div class="pw">Powered by ' + TS_NAME + "</div></div>";
+    document.body.appendChild(w);
+    function draw() {
+      window.turnstile.render("#aro-ts", {
+        sitekey: TS_KEY, theme: "dark",
+        callback: function (t) { tsToken = t; setTimeout(function () { w.remove(); if (done) done(); }, 350); },
+        "expired-callback": function () { tsToken = ""; }
+      });
+    }
+    if (window.turnstile) draw();
+    else { var sc2 = document.createElement("script"); sc2.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"; sc2.async = true; sc2.onload = draw; document.head.appendChild(sc2); }
+  }
+
   var busy = false;
   // returns true when the visitor is already unlocked; otherwise sends them to the short link and returns false
   function check(proceed) {
-    if (gc(OK) === "1") return true;
+    if (gc(OK) === "1" || gc("aro_owner") === "1") return true;
     if (busy) return false;
+    if (TS_KEY && !tsToken) { showVerify(function () { check(proceed); }); return false; }
     busy = true;
     var nonce = Math.random().toString(36).slice(2) + Date.now().toString(36);
     var back = new URL(location.href);
     back.searchParams.set("aro", nonce);
     sc(NONCE, nonce + "." + Date.now(), 1800);
-    fetch("/api/arolinks?url=" + encodeURIComponent(back.href))
+    var cf = tsToken; tsToken = "";
+    fetch("/api/arolinks?url=" + encodeURIComponent(back.href) + (cf ? "&cf=" + encodeURIComponent(cf) : ""))
       .then(function (r) { return r.json(); })
       .then(function (j) {
+        if (j && j.error === "captcha") { busy = false; dc(NONCE); showVerify(function () { check(proceed); }); return; }
         if (j && j.shortenedUrl) { location.href = j.shortenedUrl; return; }
         throw new Error("no short link");
       })
@@ -53,7 +99,7 @@
 
   // full-screen "generate key" screen - same look as the site's own modals (logo, fonts, buttons, theme colours)
   function showWall() {
-    if (gc(OK) === "1" || document.getElementById("aro-wall")) return;
+    if (gc(OK) === "1" || gc("aro_owner") === "1" || document.getElementById("aro-wall")) return;
     var st = document.createElement("style");
     st.textContent =
       "#aro-wall{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;padding:18px;overflow-y:auto;background:rgba(8,10,15,.86);background:color-mix(in srgb,var(--bg,#080a0f) 88%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:var(--text,#f4f6fb);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}" +
@@ -198,7 +244,7 @@
     tv.pause();
   }
 
-  function boot() { showWall(); }
+  function boot() { if (gc(OK) === "1" || gc("aro_owner") === "1") return; if (TS_KEY) showVerify(showWall); else showWall(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
   window.AroGate = { check: check };
 })();
